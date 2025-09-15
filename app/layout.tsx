@@ -34,6 +34,27 @@ export const metadata: Metadata = {
   description:
     "Expert dental care with advanced technology and personalized treatment plans. From routine checkups to complex procedures.",
   generator: "v0.app",
+  icons: {
+    icon: [
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" }
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+    ],
+    other: [
+      { url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/web-app-manifest-512x512.png", sizes: "512x512", type: "image/png" }
+    ]
+  },
+  manifest: "/site.webmanifest",
+  themeColor: "#2d5a4a",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Beyond Smiles"
+  }
 }
 
 export default function RootLayout({
