@@ -70,12 +70,6 @@ export default function TeamPage() {
                 image:
                   "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Amr%20Elsebaey.jpg",
               },
-              {
-                name: "Dr. Ahmed Ahmed",
-                specialty: "Endodontics",
-                description: "Endodontic consultant",
-                image: "/placeholder-zhymb.png",
-              },
             ].map((doctor, index) => (
               <StaggerItem key={index}>
                 <Card

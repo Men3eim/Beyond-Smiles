@@ -49,12 +49,15 @@ export const metadata: Metadata = {
     ]
   },
   manifest: "/site.webmanifest",
-  themeColor: "#2d5a4a",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "Beyond Smiles"
   }
+}
+
+export const viewport = {
+  themeColor: "#2d5a4a",
 }
 
 export default function RootLayout({

@@ -210,4 +210,13 @@
     font-family: var(--font-neutral-black), var(--font-sans), sans-serif;
     font-weight: 900;
   }
+  
+  /* Gradient text utilities */
+  .text-gradient-beyond {
+    background: linear-gradient(90deg, var(--sage-green) 0%, #5a6b57 30%, var(--sage-green) 70%, #8a9a87 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
 }

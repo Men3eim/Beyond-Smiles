@@ -29,9 +29,9 @@ export default function ContactPage() {
       {/* Contact Information */}
       <section className="px-6 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="max-w-4xl mx-auto">
             {/* Contact Details */}
-            <FadeInWhenVisible direction="left">
+            <FadeInWhenVisible direction="up">
               <h2 className="font-serif text-4xl text-sage-green mb-8">
                 Get in <span className="italic text-sage-green/80">Touch</span>
               </h2>
@@ -77,11 +77,11 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-serif text-lg text-sage-green mb-2">Working Hours</h3>
                       <p className="text-gray-600">
-                        Monday - Friday: 9:00 AM - 8:00 PM
+                        Monday - Thursday: 11:00 AM - 7:00 PM
                         <br />
-                        Saturday: 9:00 AM - 6:00 PM
+                        Friday: Closed
                         <br />
-                        Sunday: 10:00 AM - 4:00 PM
+                        Saturday - Sunday: 11:00 AM - 7:00 PM
                       </p>
                     </div>
                   </div>
@@ -89,73 +89,6 @@ export default function ContactPage() {
               </div>
             </FadeInWhenVisible>
 
-            {/* Contact Form */}
-            <FadeInWhenVisible direction="right" delay={0.2}>
-              <Card className="p-8 border-sage-green/20">
-                <h3 className="font-serif text-2xl text-sage-green mb-6">Send us a Message</h3>
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage-green/20 focus:border-sage-green"
-                        placeholder="Your first name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage-green/20 focus:border-sage-green"
-                        placeholder="Your last name"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage-green/20 focus:border-sage-green"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage-green/20 focus:border-sage-green"
-                      placeholder="Your phone number"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage-green/20 focus:border-sage-green">
-                      <option>Select a service</option>
-                      <option>General Dentistry</option>
-                      <option>Orthodontics</option>
-                      <option>Cosmetic Dentistry</option>
-                      <option>Oral Surgery</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                    <textarea
-                      rows={4}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sage-green/20 focus:border-sage-green"
-                      placeholder="Tell us about your needs..."
-                    ></textarea>
-                  </div>
-
-                  <Button className="w-full font-neutral-medium cursor-pointer bg-sage-green hover:bg-sage-green/90 text-white py-3">Send Message</Button>
-                </form>
-              </Card>
-            </FadeInWhenVisible>
           </div>
         </div>
       </section>
@@ -167,9 +100,22 @@ export default function ContactPage() {
             <h2 className="font-serif text-4xl text-sage-green mb-6">
               Find <span className="italic text-sage-green/80">Us</span>
             </h2>
-            <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
-              <p className="text-gray-500">Interactive Map Coming Soon</p>
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.5!2d31.066055996654775!3d29.989877676120393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDU5JzIzLjYiTiAzMcKwMDMnNTcuOCJF!5e0!3m2!1sen!2seg!4v1234567890"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Beyond Smiles Dental Clinic Location"
+                className="w-full h-96"
+              ></iframe>
             </div>
+            <p className="text-sm text-dark-grey mt-4 font-neutral-regular">
+              Click and drag to explore our location
+            </p>
           </FadeInWhenVisible>
         </div>
       </section>
