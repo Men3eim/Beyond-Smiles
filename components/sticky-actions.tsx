@@ -11,10 +11,6 @@ export function StickyActions() {
     { number: "+201109721677", label: "Secondary" }
   ];
 
-  const handleCall = (number: string) => {
-    window.open(`tel:${number}`, '_self');
-  };
-
   const handleWhatsApp = (number: string) => {
     const message = "Hello! I'm interested in booking an appointment at Beyond Smiles. Could you please provide me with more information?";
     const encodedMessage = encodeURIComponent(message);
@@ -73,9 +69,9 @@ export function StickyActions() {
           <div className="p-4 space-y-3">
             {phoneNumbers.map((phone, index) => (
               <div key={index} className="group">
-                <button
-                  onClick={() => handleCall(phone.number)}
-                  className="w-full flex items-center justify-between p-3 rounded-xl bg-light-grey hover:bg-sage-green/10 transition-all duration-300 group-hover:shadow-md"
+                <a
+                  href={`tel:${phone.number}`}
+                  className="w-full flex items-center justify-between p-3 rounded-xl bg-light-grey hover:bg-sage-green/10 transition-all duration-300 group-hover:shadow-md cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-sage-green/20 rounded-full flex items-center justify-center group-hover:bg-sage-green/30 transition-colors duration-300">
@@ -89,7 +85,7 @@ export function StickyActions() {
                     </div>
                   </div>
                   <ChevronUp className="w-4 h-4 text-neutral-grey group-hover:text-sage-green transition-colors duration-300 rotate-45" />
-                </button>
+                </a>
               </div>
             ))}
 
