@@ -4,6 +4,34 @@ import { CheckCircle, Users, Award, Heart, Lightbulb } from "lucide-react"
 import Link from "next/link"
 import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Beyond Smiles - Expert Dental Team in Alexandria | 15+ Years Experience",
+  description: "Learn about Beyond Smiles dental clinic in Alexandria. Our expert team provides comprehensive dental care with advanced technology and patient-centered approach. 15+ years of excellence.",
+  keywords: "about Beyond Smiles, dental team Alexandria, dental clinic Egypt, expert dentists, dental specialists, patient care",
+  openGraph: {
+    title: "About Beyond Smiles - Expert Dental Team in Alexandria",
+    description: "Learn about our expert dental team and comprehensive care approach. 15+ years of excellence in dental care.",
+    url: "https://beyondsmiles.com/about",
+    images: [
+      {
+        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6520.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Beyond Smiles Dental Clinic Team",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Beyond Smiles - Expert Dental Team in Alexandria",
+    description: "Learn about our expert dental team and comprehensive care approach. 15+ years of excellence in dental care.",
+  },
+  alternates: {
+    canonical: "https://beyondsmiles.com/about",
+  },
+};
 
 export default function AboutPage() {
   return (

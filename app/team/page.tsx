@@ -4,6 +4,34 @@ import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Expert Dental Team in Alexandria | Dr. Mohamed Abdallah & Specialists | Beyond Smiles",
+  description: "Meet our expert dental team in Alexandria including Dr. Mohamed Abdallah (cosmetic dentistry), Prof. Abbas Zaher (orthodontics), and other specialists. 15+ years of combined experience.",
+  keywords: "dental team Alexandria, Dr Mohamed Abdallah, cosmetic dentist, orthodontist, oral surgeon, dental specialists Egypt, Beyond Smiles team",
+  openGraph: {
+    title: "Expert Dental Team in Alexandria | Beyond Smiles",
+    description: "Meet our expert dental team including Dr. Mohamed Abdallah and other specialists. 15+ years of combined experience.",
+    url: "https://beyondsmiles.com/team",
+    images: [
+      {
+        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Mohamed%20Abdallah.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Mohamed Abdallah - Beyond Smiles Team",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Expert Dental Team in Alexandria | Beyond Smiles",
+    description: "Meet our expert dental team including Dr. Mohamed Abdallah and other specialists.",
+  },
+  alternates: {
+    canonical: "https://beyondsmiles.com/team",
+  },
+};
 
 export default function TeamPage() {
   return (
@@ -75,11 +103,11 @@ export default function TeamPage() {
                 <Card
                   className="overflow-hidden border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group"
                 >
-                  <div className="aspect-square overflow-hidden">
+                  <div className="h-80 overflow-hidden">
                     <img
                       src={doctor.image || "/placeholder.svg"}
-                      alt={doctor.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      alt={`${doctor.name} - ${doctor.specialty} at Beyond Smiles Dental Clinic`}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="p-6">

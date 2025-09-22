@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://beyondsmiles.com/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg</image:loc>
+      <image:title>Beyond Smiles Dental Clinic Interior</image:title>
+      <image:caption>Modern dental clinic interior at Beyond Smiles</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://beyondsmiles.com/about</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6520.jpg</image:loc>
+      <image:title>Beyond Smiles Dental Team</image:title>
+      <image:caption>Our expert dental team at Beyond Smiles</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://beyondsmiles.com/services</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6449.jpg</image:loc>
+      <image:title>Dental Services at Beyond Smiles</image:title>
+      <image:caption>State-of-the-art dental equipment and services</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Team Page -->
+  <url>
+    <loc>https://beyondsmiles.com/team</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Mohamed%20Abdallah.jpg</image:loc>
+      <image:title>Dr. Mohamed Abdallah - Beyond Smiles Team</image:title>
+      <image:caption>Dr. Mohamed Abdallah, Cosmetic & Implant Dentistry Specialist</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://beyondsmiles.com/contact</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg</image:loc>
+      <image:title>Beyond Smiles Contact Information</image:title>
+      <image:caption>Contact Beyond Smiles dental clinic in New Giza Health Park</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://beyondsmiles.com/gallery</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg</image:loc>
+      <image:title>Beyond Smiles Clinic Gallery</image:title>
+      <image:caption>Modern dental clinic facilities and equipment</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Cases Page -->
+  <url>
+    <loc>https://beyondsmiles.com/cases</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/111_9466.jpg</image:loc>
+      <image:title>Dental Before and After Cases</image:title>
+      <image:caption>Real patient transformations at Beyond Smiles</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

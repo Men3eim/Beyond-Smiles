@@ -5,6 +5,34 @@ import { Button } from "@/components/ui/button";
 import { Camera, Eye, Heart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dental Clinic Gallery | Modern Facilities & Equipment | Beyond Smiles Alexandria",
+  description: "Explore our modern dental clinic gallery in Alexandria. See our state-of-the-art equipment, comfortable patient areas, and professional treatment rooms at New Giza Health Park.",
+  keywords: "dental clinic gallery, modern dental clinic, dental equipment, clinic interior, Beyond Smiles facility, Alexandria dental center",
+  openGraph: {
+    title: "Dental Clinic Gallery | Beyond Smiles Alexandria",
+    description: "Explore our modern dental clinic facilities and state-of-the-art equipment in Alexandria.",
+    url: "https://beyondsmiles.com/gallery",
+    images: [
+      {
+        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Beyond Smiles Dental Clinic Gallery",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dental Clinic Gallery | Beyond Smiles Alexandria",
+    description: "Explore our modern dental clinic facilities and state-of-the-art equipment.",
+  },
+  alternates: {
+    canonical: "https://beyondsmiles.com/gallery",
+  },
+};
 
 export default function GalleryPage() {
   const galleryImages = [

@@ -4,6 +4,34 @@ import { Card } from "@/components/ui/card"
 import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contact Beyond Smiles Dental Clinic | New Giza Health Park | Alexandria",
+  description: "Contact Beyond Smiles dental clinic in New Giza Health Park, Alexandria. Call +201289107773 or +201109721677. Open Mon-Thu & Sat-Sun 11AM-7PM. Book your appointment today.",
+  keywords: "contact Beyond Smiles, dental clinic Alexandria, New Giza Health Park, dental appointment, phone number, address, working hours",
+  openGraph: {
+    title: "Contact Beyond Smiles Dental Clinic | Alexandria",
+    description: "Contact us at New Giza Health Park, Alexandria. Call +201289107773 or +201109721677. Book your appointment today.",
+    url: "https://beyondsmiles.com/contact",
+    images: [
+      {
+        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Beyond Smiles Dental Clinic Location",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Beyond Smiles Dental Clinic | Alexandria",
+    description: "Contact us at New Giza Health Park, Alexandria. Call +201289107773 or +201109721677.",
+  },
+  alternates: {
+    canonical: "https://beyondsmiles.com/contact",
+  },
+};
 
 export default function ContactPage() {
   return (

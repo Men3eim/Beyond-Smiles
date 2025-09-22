@@ -4,6 +4,34 @@ import { CheckCircle, Shield, Smile, Scissors, Wrench, Sparkles, Heart, Users, B
 import Link from "next/link"
 import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Dental Services in Alexandria | Cosmetic, Implants, Orthodontics | Beyond Smiles",
+  description: "Comprehensive dental services in Alexandria including cosmetic dentistry, dental implants, orthodontics, oral surgery, and general dentistry. Expert specialists under one roof.",
+  keywords: "dental services Alexandria, cosmetic dentistry, dental implants, orthodontics, oral surgery, teeth whitening, root canal, dental care Egypt",
+  openGraph: {
+    title: "Dental Services in Alexandria | Beyond Smiles",
+    description: "Comprehensive dental services including cosmetic dentistry, implants, orthodontics, and general dentistry. Expert specialists under one roof.",
+    url: "https://beyondsmiles.com/services",
+    images: [
+      {
+        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6449.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Beyond Smiles Dental Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dental Services in Alexandria | Beyond Smiles",
+    description: "Comprehensive dental services including cosmetic dentistry, implants, orthodontics, and general dentistry.",
+  },
+  alternates: {
+    canonical: "https://beyondsmiles.com/services",
+  },
+};
 
 export default function ServicesPage() {
   const services = [

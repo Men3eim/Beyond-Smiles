@@ -18,6 +18,50 @@ import {
   Baby,
   Zap,
 } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Beyond Smiles - Premier Dental Clinic in Alexandria | Cosmetic & General Dentistry",
+  description: "Expert dental care in Alexandria with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services. Book your appointment today at New Giza Health Park.",
+  keywords: "dental clinic Alexandria, cosmetic dentistry, dental implants, orthodontics, teeth whitening, dental care Egypt, Beyond Smiles",
+  authors: [{ name: "Beyond Smiles Dental Clinic" }],
+  openGraph: {
+    title: "Beyond Smiles - Premier Dental Clinic in Alexandria",
+    description: "Expert dental care with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services.",
+    url: "https://beyondsmiles.com",
+    siteName: "Beyond Smiles",
+    images: [
+      {
+        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Beyond Smiles Dental Clinic Interior",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Beyond Smiles - Premier Dental Clinic in Alexandria",
+    description: "Expert dental care with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services.",
+    images: ["https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://beyondsmiles.com",
+  },
+};
 
 export default function HomePage() {
   return (

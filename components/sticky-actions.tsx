@@ -81,7 +81,6 @@ export function StickyActions() {
                       <p className="font-neutral-medium text-dark-grey group-hover:text-sage-green transition-colors duration-300">
                         {phone.number}
                       </p>
-                      <p className="text-sm text-neutral-grey">{phone.label} Number</p>
                     </div>
                   </div>
                   <ChevronUp className="w-4 h-4 text-neutral-grey group-hover:text-sage-green transition-colors duration-300 rotate-45" />
@@ -108,12 +107,6 @@ export function StickyActions() {
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="px-4 py-3 bg-light-grey/50 border-t border-light-grey">
-            <p className="text-xs text-neutral-grey text-center">
-              Available during working hours
-            </p>
-          </div>
         </div>
       )}
 

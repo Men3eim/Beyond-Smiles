@@ -77,6 +77,111 @@ export default function RootLayout({
       className={`${garamond.variable} ${inter.variable} ${neutralSans.variable} antialiased`}
     >
       <body className="font-sans">
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "DentalClinic",
+              "name": "Beyond Smiles",
+              "description": "Expert dental care with advanced technology and personalized treatment plans. From routine checkups to complex procedures.",
+              "url": "https://beyondsmiles.com",
+              "logo": "https://beyondsmiles.com/beyond-smiles-logo.svg",
+              "image": "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg",
+              "telephone": ["+201289107773", "+201109721677"],
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Building 1, Floor 2, Clinic 24",
+                "addressLocality": "New Giza",
+                "addressRegion": "Alexandria",
+                "addressCountry": "Egypt",
+                "postalCode": "21500"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "29.989877676120393",
+                "longitude": "31.066055996654775"
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                  "opens": "11:00",
+                  "closes": "19:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Friday",
+                  "opens": "00:00",
+                  "closes": "00:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Saturday", "Sunday"],
+                  "opens": "11:00",
+                  "closes": "19:00"
+                }
+              ],
+              "medicalSpecialty": [
+                "Cosmetic Dentistry",
+                "Dental Implants",
+                "Orthodontics",
+                "Oral Surgery",
+                "Endodontics",
+                "Periodontics",
+                "Pediatric Dentistry",
+                "General Dentistry"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Dental Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "MedicalProcedure",
+                      "name": "Cosmetic Dentistry"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "MedicalProcedure",
+                      "name": "Dental Implants"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "MedicalProcedure",
+                      "name": "Orthodontics"
+                    }
+                  }
+                ]
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "9"
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Jilan Kadry"
+                  },
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  },
+                  "reviewBody": "From one generation to another our whole family has always been blessed to have such an outstanding dental care in Alexandria. Thank you Dr Mohamed and all his team for always being the best."
+                }
+              ]
+            })
+          }}
+        />
         <Navigation />
         <PageTransition>
           {children}
