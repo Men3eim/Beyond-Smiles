@@ -14,12 +14,16 @@ const garamond = EB_Garamond({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-garamond",
+  preload: true,
+  fallback: ['serif'],
 })
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+  preload: true,
+  fallback: ['system-ui', 'arial'],
 })
 
 // Neutral Sans font - custom local font
@@ -33,6 +37,8 @@ const neutralSans = localFont({
   ],
   variable: "--font-neutral-sans",
   display: "swap",
+  preload: true,
+  fallback: ['system-ui', 'arial'],
 })
 
 export const metadata: Metadata = {
@@ -64,6 +70,9 @@ export const metadata: Metadata = {
 
 export const viewport = {
   themeColor: "#2d5a4a",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
@@ -76,6 +85,30 @@ export default function RootLayout({
       lang="en" 
       className={`${garamond.variable} ${inter.variable} ${neutralSans.variable} antialiased`}
     >
+      <head>
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'GA_MEASUREMENT_ID', {
+                page_title: document.title,
+                page_location: window.location.href,
+              });
+            `,
+          }}
+        />
+        {/* Preload critical resources */}
+        <link rel="preload" href="/fonts/NeutralSans-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//obxgbxpiygppoztqzksw.supabase.co" />
+        <link rel="preconnect" href="https://obxgbxpiygppoztqzksw.supabase.co" crossOrigin="anonymous" />
+      </head>
       <body className="font-sans">
         {/* Structured Data */}
         <script

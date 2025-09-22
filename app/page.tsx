@@ -4,6 +4,7 @@ import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { FadeInWhenVisible } from "@/components/fade-in-when-visible";
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Shield,
   Smile,
@@ -149,39 +150,50 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <div className="relative w-full h-[500px] md:h-[600px]">
                     {/* Image 1 */}
-                    <img
+                    <Image
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6439.jpg"
                       alt="Professional dental care at Beyond Smiles"
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
+                      fill
+                      className="object-cover transition-opacity duration-1000 ease-in-out opacity-100"
                       style={{ animation: 'fadeInOut 8s infinite 0s' }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority
                     />
                     {/* Image 2 */}
-                    <img
+                    <Image
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg"
                       alt="Advanced dental technology at Beyond Smiles"
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      fill
+                      className="object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 8s infinite 2s' }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     {/* Image 3 */}
-                    <img
+                    <Image
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6566.jpg"
                       alt="Modern dental clinic interior at Beyond Smiles"
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      fill
+                      className="object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 8s infinite 4s' }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     {/* Image 4 */}
-                    <img
+                    <Image
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6466.jpg"
                       alt="Expert dental team at Beyond Smiles"
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      fill
+                      className="object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 8s infinite 6s' }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     {/* Image 5 - Back to first */}
-                    <img
+                    <Image
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6449.jpg"
                       alt="State-of-the-art dental equipment at Beyond Smiles"
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      fill
+                      className="object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 8s infinite 8s' }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                   
@@ -623,10 +635,13 @@ export default function HomePage() {
               </Link>
             </FadeInWhenVisible>
             <FadeInWhenVisible direction="right" delay={0.2} className="relative">
-              <img
+              <Image
                 src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6414.jpg"
                 alt="Modern dental clinic interior"
+                width={600}
+                height={400}
                 className="w-full h-auto rounded-2xl shadow-lg"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </FadeInWhenVisible>
           </div>
