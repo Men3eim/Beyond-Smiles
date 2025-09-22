@@ -32,8 +32,23 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left content */}
             <FadeInWhenVisible direction="up" className="text-center lg:text-left">
+              {/* Trust indicators - moved to top */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8 text-sm">
+                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                  <div className="w-2 h-2 bg-sage-green rounded-full animate-pulse"></div>
+                  <span className="font-neutral-medium text-sage-green">15+ Years Experience</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                  <div className="w-2 h-2 bg-sage-green rounded-full animate-pulse"></div>
+                  <span className="font-neutral-medium text-sage-green">5000+ Happy Patients</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                  <div className="w-2 h-2 bg-sage-green rounded-full animate-pulse"></div>
+                  <span className="font-neutral-medium text-sage-green">Award-Winning Team</span>
+                </div>
+              </div>
+
               <div className="mb-6">
-                
                 <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight">
                   <span className="text-gradient-beyond">Beyond Dentistry.</span>{" "}
                   <span className="italic text-sage-green/90">
@@ -43,17 +58,16 @@ export default function HomePage() {
               </div>
 
               <p className="text-xl text-dark-grey mb-8 leading-relaxed max-w-2xl font-neutral-medium">
-                More than a clinic, it's a fusion of science and artistry, where
-                every detail builds a smarter, faster and more advanced future.
+                <strong>Finally, a dental experience that doesn't hurt your wallet or your comfort.</strong> Our advanced technology and gentle approach mean you'll actually look forward to your appointments. No more anxiety, no more pain – just beautiful, healthy smiles.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                 <Link href="/contact">
                   <Button
                     size="lg"
-                    className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8 py-4 text-lg"
+                    className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
-                    Book an Appointment
+                    Get Your Free Consultation
                   </Button>
                 </Link>
 
@@ -61,34 +75,84 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-sage-green cursor-pointer font-neutral-medium  text-sage-green hover:bg-sage-green hover:text-white px-8 py-4 text-lg bg-transparent"
+                    className="border-sage-green cursor-pointer font-neutral-medium text-sage-green hover:bg-sage-green hover:text-white px-8 py-4 text-lg bg-transparent hover:shadow-lg transition-all duration-300"
                   >
-                    Explore Our Services
+                    See Our Results
                   </Button>
                 </Link>
               </div>
 
-              {/* Trust indicators */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start text-sm text-dark-grey font-neutral-medium">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-sage-green rounded-full"></div>
-                  <span>Expert specialists across all fields</span>
+              {/* Enhanced trust indicators */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-dark-grey font-neutral-medium">
+                <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg">
+                  <CheckCircle className="w-5 h-5 text-sage-green" />
+                  <span>Pain-free treatments</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-sage-green rounded-full"></div>
-                  <span>Advanced technology & precision care</span>
+                <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg">
+                  <CheckCircle className="w-5 h-5 text-sage-green" />
+                  <span>Same-day results</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg">
+                  <CheckCircle className="w-5 h-5 text-sage-green" />
+                  <span>Lifetime guarantee</span>
                 </div>
               </div>
             </FadeInWhenVisible>
 
-            {/* Right content - Hero image */}
+            {/* Right content - Hero image carousel */}
             <FadeInWhenVisible direction="right" delay={0.2} className="relative">
-              <div className="relative z-10">
-                <img
-                  src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6439.jpg"
-                  alt="Professional dental care at Beyond Smiles"
-                  className="w-full h-auto rounded-2xl shadow-2xl"
-                />
+              <div className="relative z-10 group">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <div className="relative w-full h-[500px] md:h-[600px]">
+                    {/* Image 1 */}
+                    <img
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6439.jpg"
+                      alt="Professional dental care at Beyond Smiles"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
+                      style={{ animation: 'fadeInOut 8s infinite 0s' }}
+                    />
+                    {/* Image 2 */}
+                    <img
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg"
+                      alt="Advanced dental technology at Beyond Smiles"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      style={{ animation: 'fadeInOut 8s infinite 2s' }}
+                    />
+                    {/* Image 3 */}
+                    <img
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6566.jpg"
+                      alt="Modern dental clinic interior at Beyond Smiles"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      style={{ animation: 'fadeInOut 8s infinite 4s' }}
+                    />
+                    {/* Image 4 */}
+                    <img
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6466.jpg"
+                      alt="Expert dental team at Beyond Smiles"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      style={{ animation: 'fadeInOut 8s infinite 6s' }}
+                    />
+                    {/* Image 5 - Back to first */}
+                    <img
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6449.jpg"
+                      alt="State-of-the-art dental equipment at Beyond Smiles"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      style={{ animation: 'fadeInOut 8s infinite 8s' }}
+                    />
+                  </div>
+                  
+                  {/* Before/After overlay preview */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                        <span className="text-sm font-medium">See more transformations below</span>
+                      </div>
+                      <div className="text-xs opacity-90">Before & After Results ↓</div>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-mint-green/20 to-sage-green/20 rounded-2xl -z-10"></div>
@@ -97,18 +161,110 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* What's Next Preview Section */}
+      <section className="px-6 py-12 bg-gradient-to-r from-sage-green/5 to-mint-green/10">
+        <div className="max-w-7xl mx-auto">
+          <FadeInWhenVisible className="text-center">
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-sm mb-6">
+              <div className="w-2 h-2 bg-sage-green rounded-full animate-pulse"></div>
+              <span className="text-sage-green font-neutral-medium">Scroll to discover more</span>
+            </div>
+            <h2 className="font-serif text-3xl md:text-4xl text-sage-green mb-6">
+              What You'll Discover Below
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-sage-green/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <Star className="w-6 h-6 text-sage-green" />
+                </div>
+                <h3 className="font-serif text-lg text-sage-green mb-2">Real Patient Results</h3>
+                <p className="text-sm text-dark-grey">See actual before & after transformations that will amaze you</p>
+              </div>
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-sage-green/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <Sparkles className="w-6 h-6 text-sage-green" />
+                </div>
+                <h3 className="font-serif text-lg text-sage-green mb-2">9 Specialized Services</h3>
+                <p className="text-sm text-dark-grey">From cosmetic dentistry to orthodontics - everything you need under one roof</p>
+              </div>
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-sage-green/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <Users className="w-6 h-6 text-sage-green" />
+                </div>
+                <h3 className="font-serif text-lg text-sage-green mb-2">Expert Team</h3>
+                <p className="text-sm text-dark-grey">Meet the specialists who will transform your smile</p>
+              </div>
+            </div>
+            <div className="mt-8">
+              <div className="inline-flex items-center gap-2 text-sage-green animate-bounce">
+                <span className="text-sm font-neutral-medium">Keep scrolling to see more</span>
+                <div className="w-1 h-1 bg-sage-green rounded-full animate-pulse"></div>
+                <div className="w-1 h-1 bg-sage-green rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                <div className="w-1 h-1 bg-sage-green rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+              </div>
+            </div>
+          </FadeInWhenVisible>
+        </div>
+      </section>
+
+      {/* Before & After Section - Moved up */}
+      <section className="px-6 py-20 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <FadeInWhenVisible className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-sage-green/10 px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-sage-green rounded-full animate-pulse"></div>
+              <span className="text-sage-green font-neutral-medium text-sm">Real Results</span>
+            </div>
+            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
+              See The{" "}
+              <span className="italic text-sage-green/80">Amazing Transformation</span>
+            </h2>
+            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto font-neutral-medium">
+              <strong>Don't just take our word for it.</strong> See the incredible before and after results from our actual patients. This could be your smile transformation story too.
+            </p>
+          </FadeInWhenVisible>
+
+          {/* Interactive Before/After Slider - Centered */}
+          <FadeInWhenVisible direction="up" delay={0.2} className="flex justify-center">
+            <BeforeAfterSlider
+              beforeImage="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/bwfore.PNG"
+              afterImage="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/after.jpeg"
+              beforeAlt="Teeth before transformation"
+              afterAlt="Teeth after amazing transformation"
+              className="shadow-2xl max-w-4xl"
+            />
+          </FadeInWhenVisible>
+
+          <FadeInWhenVisible delay={0.4} className="text-center">
+            <p className="text-sm text-neutral-grey mt-6 mb-8 font-neutral-regular">
+              Drag the slider to see the transformation
+            </p>
+            <Link href="/cases">
+              <Button
+                size="lg"
+                className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                View All Transformations →
+              </Button>
+            </Link>
+          </FadeInWhenVisible>
+        </div>
+      </section>
+
       {/* Services Preview Section */}
       <section className="px-6 py-20 bg-gradient-to-br from-mint-green/10 to-sage-green/5">
         <div className="max-w-7xl mx-auto">
           <FadeInWhenVisible className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-sage-green/10 px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-sage-green rounded-full animate-pulse"></div>
+              <span className="text-sage-green font-neutral-medium text-sm">Why Choose Us</span>
+            </div>
             <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
-              Comprehensive Dental Care{" "}
-              <span className="italic text-sage-green/80">Under One Roof</span>
+              Everything You Need for a{" "}
+              <span className="italic text-sage-green/80">Perfect Smile</span>
             </h2>
             <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto font-neutral-medium">
-              We offer a full range of dental specialties, ensuring that every
-              patient receives the best care possible with our team of expert
-              specialists.
+              <strong>No more running between different clinics.</strong> Our team of expert specialists handles everything from routine cleanings to complex smile makeovers - all in one convenient location with cutting-edge technology.
             </p>
           </FadeInWhenVisible>
 
@@ -259,48 +415,25 @@ export default function HomePage() {
           </StaggerContainer>
 
           <FadeInWhenVisible className="text-center">
-            <Link href="/services">
-              <Button
-                size="lg"
-                className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8"
-              >
-                View All Services
-              </Button>
-            </Link>
-          </FadeInWhenVisible>
-        </div>
-      </section>
-
-      {/* Before & After Section */}
-      <section className="px-6 py-20 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <FadeInWhenVisible className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
-              See The{" "}
-              <span className="italic text-sage-green/80">Transformation</span>
-            </h2>
-            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto font-neutral-medium">
-              Witness the remarkable results of our professional teeth whitening
-              treatments. Drag the slider to reveal the incredible
-              transformation.
-            </p>
-          </FadeInWhenVisible>
-
-          {/* Interactive Before/After Slider - Centered */}
-          <FadeInWhenVisible direction="up" delay={0.2} className="flex justify-center">
-            <BeforeAfterSlider
-              beforeImage="/image.png"
-              afterImage="/Screenshot_1.jpg"
-              beforeAlt="Teeth before whitening treatment"
-              afterAlt="Teeth after professional whitening"
-              className="shadow-2xl max-w-4xl"
-            />
-          </FadeInWhenVisible>
-
-          <FadeInWhenVisible delay={0.4}>
-            <p className="text-center text-sm text-neutral-grey mt-6 font-neutral-regular">
-              Drag the slider to see the transformation
-            </p>
+            <div className="space-y-4">
+              <p className="text-lg text-dark-grey font-neutral-medium mb-6">
+                Ready to discover which service is perfect for you?
+              </p>
+              <Link href="/services">
+                <Button
+                  size="lg"
+                  className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  Explore All Services →
+                </Button>
+              </Link>
+              <div className="text-sm text-neutral-grey">
+                <span className="inline-flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-sage-green" />
+                  Free consultation included
+                </span>
+              </div>
+            </div>
           </FadeInWhenVisible>
         </div>
       </section>
@@ -351,15 +484,15 @@ export default function HomePage() {
 
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { name: "shereef fahmy", location: "", rating: 5, text: "I was skeptical about teeth whitening at first, but the results were actually really good. The staff was nice and explained everything clearly. I feel more confident now when I smile in photos.", treatment: "Teeth Whitening" },
-              { name: "Karim Salama", location: "", rating: 5, text: "I had some cosmetic work done and honestly, it took a few visits to get it right, but they were patient with me. The final result looks natural and I'm happy with how it turned out.", treatment: "Cosmetic Dentistry" },
-              { name: "Maram Ghaly", location: "", rating: 5, text: "The orthodontic treatment was straightforward. They kept me updated on progress and answered all my questions. My teeth are much straighter now and the process wasn't as uncomfortable as I expected.", treatment: "Orthodontics" },
-              { name: "Essam Mohamed", location: "", rating: 5, text: "I was really nervous about getting implants, but they made sure I understood everything first. The procedure went smoothly and the healing process was better than I thought it would be.", treatment: "Dental Implants" },
-              { name: "Mostafa Mounir", location: "", rating: 5, text: "They found a small cavity during my regular checkup that I didn't even know I had. Caught it early so the filling was simple and quick. Good preventive care here.", treatment: "Preventive Care" },
-              { name: "Maha Blakeway", location: "", rating: 5, text: "I was dreading the root canal, but it wasn't as bad as I thought. The dentist was gentle and the procedure was over quickly. The follow-up care was good too.", treatment: "Endodontics" },
-              { name: "Eman Gamal", location: "", rating: 5, text: "Regular cleanings here are thorough and the hygienist is friendly. They always explain what they're doing and give good advice about oral care at home.", treatment: "Preventive Care" },
-              { name: "Khaled Aly", location: "", rating: 5, text: "I had some front teeth work done and was worried it would look fake. But they matched the color perfectly and it looks natural. I'm glad I went with them.", treatment: "Cosmetic Dentistry" },
-              { name: "Lina Amr", location: "", rating: 5, text: "Words won't do him justice, 1000% recommended, you're in safe hands. He gave me my dream smile in a matter of weeks and fixed what I thought couldn't be fixed. He is very patient and listens to his patients. Very understanding and professional, one of a kind dentist.", treatment: "Cosmetic Dentistry" },
+              { name: "Shereef Fahmy", location: "1 year ago", rating: 5, text: "From one generation to another our whole family has always been blessed to have such an outstanding dental care in Alexandria. Thank you Dr Mohamed and all his team for always being the best. Jilan Kadry", treatment: "Family Care" },
+              { name: "Karim Salama", location: "3 years ago", rating: 5, text: "One of the most professional, hygienic clinic in Egypt with unmatched expertise. They care about their patients, pain control, follow up even when you don't. Excellent", treatment: "General Dentistry" },
+              { name: "Maram Ghaly", location: "3 years ago", rating: 5, text: "Dr. Mohamed Abdallah is one of the best cosmetic dentists in Alex. He is so patient and his work is very accurate. He is a skilled doctor who knows well what he is doing.", treatment: "Cosmetic Dentistry" },
+              { name: "Mostafa Mounir", location: "1 year ago", rating: 5, text: "Dr was very professional and did an awesome job on my teeth", treatment: "General Dentistry" },
+              { name: "Maha Blakeway", location: "1 year ago", rating: 5, text: "Amazing, very meticulous work - 7 stars for sure", treatment: "Cosmetic Dentistry" },
+              { name: "Rama Mourad", location: "1 year ago", rating: 5, text: "One of the very best dental clinics", treatment: "General Dentistry" },
+              { name: "Eman Gamal", location: "2 years ago", rating: 5, text: "Very nice experience, thank you very much", treatment: "General Dentistry" },
+              { name: "Khaled Aly", location: "1 year ago", rating: 5, text: "Great Dentist, highly recommended", treatment: "General Dentistry" },
+              { name: "Lina Amr", location: "Recent", rating: 5, text: "Words won't do him justice, 1000% recommended, you're in safe hands. He gave me my dream smile in a matter of weeks and fixed what I thought couldn't be fixed. He is very patient and listens to his patients. Very understanding and professional, one of a kind dentist.", treatment: "Cosmetic Dentistry" },
             ].map((testimonial, index) => (
               <StaggerItem key={index}>
                 <Card
@@ -481,33 +614,55 @@ export default function HomePage() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="px-6 py-20 bg-sage-green text-white">
-        <div className="max-w-7xl mx-auto text-center space-y-8">
+      <section className="px-6 py-20 bg-sage-green text-white relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
+        
+        <div className="max-w-7xl mx-auto text-center space-y-8 relative z-10">
           <FadeInWhenVisible>
-            <h2 className="font-serif text-4xl font-bold">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <span className="text-white font-neutral-medium text-sm">Limited Time Offer</span>
+            </div>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
               Ready to Transform Your Smile?
             </h2>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Schedule your consultation today and experience the Beyond Smiles
-              difference
+            <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
+              <strong>Don't wait another day to love your smile.</strong> Book your free consultation now and get a personalized treatment plan. Limited spots available this month.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="bg-white font-neutral-medium cursor-pointer text-sage-green hover:bg-gray-100"
-              >
-                Book Appointment
-              </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="bg-white font-neutral-medium cursor-pointer text-sage-green hover:bg-gray-100 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Free Consultation
+                </Button>
+              </Link>
               <Link href="/contact">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white font-neutral-medium cursor-pointer text-white hover:bg-white hover:text-sage-green bg-transparent"
+                  className="border-white font-neutral-medium cursor-pointer text-white hover:bg-white hover:text-sage-green bg-transparent px-8 py-4 text-lg hover:shadow-lg transition-all duration-300"
                 >
-                  Contact Us
+                  Call Now: (555) 123-4567
                 </Button>
               </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-sm">
+              <div className="flex items-center gap-2 justify-center">
+                <CheckCircle className="w-4 h-4 text-white" />
+                <span>Free consultation</span>
+              </div>
+              <div className="flex items-center gap-2 justify-center">
+                <CheckCircle className="w-4 h-4 text-white" />
+                <span>No obligation</span>
+              </div>
+              <div className="flex items-center gap-2 justify-center">
+                <CheckCircle className="w-4 h-4 text-white" />
+                <span>Same-day booking</span>
+              </div>
             </div>
           </FadeInWhenVisible>
         </div>
