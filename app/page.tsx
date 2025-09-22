@@ -112,7 +112,7 @@ export default function HomePage() {
                     size="lg"
                     className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
-                    Get Your Free Consultation
+                    Book Your Smile Transformation
                   </Button>
                 </Link>
 
@@ -150,50 +150,44 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <div className="relative w-full h-[500px] md:h-[600px]">
                     {/* Image 1 */}
-                    <Image
+                    <img
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6439.jpg"
                       alt="Professional dental care at Beyond Smiles"
-                      fill
-                      className="object-cover transition-opacity duration-1000 ease-in-out opacity-100"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
                       style={{ animation: 'fadeInOut 8s infinite 0s' }}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      priority
+                      loading="eager"
                     />
                     {/* Image 2 */}
-                    <Image
+                    <img
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg"
                       alt="Advanced dental technology at Beyond Smiles"
-                      fill
-                      className="object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 8s infinite 2s' }}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                     {/* Image 3 */}
-                    <Image
+                    <img
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6566.jpg"
                       alt="Modern dental clinic interior at Beyond Smiles"
-                      fill
-                      className="object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 8s infinite 4s' }}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                     {/* Image 4 */}
-                    <Image
+                    <img
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6466.jpg"
                       alt="Expert dental team at Beyond Smiles"
-                      fill
-                      className="object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 8s infinite 6s' }}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                     {/* Image 5 - Back to first */}
-                    <Image
+                    <img
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6449.jpg"
                       alt="State-of-the-art dental equipment at Beyond Smiles"
-                      fill
-                      className="object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 8s infinite 8s' }}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                   </div>
                   
@@ -635,13 +629,11 @@ export default function HomePage() {
               </Link>
             </FadeInWhenVisible>
             <FadeInWhenVisible direction="right" delay={0.2} className="relative">
-              <Image
+              <img
                 src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6414.jpg"
                 alt="Modern dental clinic interior"
-                width={600}
-                height={400}
                 className="w-full h-auto rounded-2xl shadow-lg"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="lazy"
               />
             </FadeInWhenVisible>
           </div>
@@ -688,7 +680,7 @@ export default function HomePage() {
               Ready to Transform Your Smile?
             </h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-              <strong>Don't wait another day to love your smile.</strong> Book your free consultation now and get a personalized treatment plan. Limited spots available this month.
+              <strong>Don't wait another day to love your smile.</strong> Book your personalized consultation now and get a custom treatment plan. Call +201289107773 to secure your spot.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link href="/contact">
@@ -696,7 +688,7 @@ export default function HomePage() {
                   size="lg"
                   className="bg-white font-neutral-medium cursor-pointer text-sage-green hover:bg-gray-100 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
-                  Get Free Consultation
+                  Start Your Journey
                 </Button>
               </Link>
               <Link href="/contact">
@@ -705,7 +697,7 @@ export default function HomePage() {
                   variant="outline"
                   className="border-white font-neutral-medium cursor-pointer text-white hover:bg-white hover:text-sage-green bg-transparent px-8 py-4 text-lg hover:shadow-lg transition-all duration-300"
                 >
-                  Call Now: (555) 123-4567
+                  Call Now: +201289107773
                 </Button>
               </Link>
             </div>

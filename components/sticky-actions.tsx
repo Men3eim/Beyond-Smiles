@@ -12,7 +12,7 @@ export function StickyActions() {
   ];
 
   const handleWhatsApp = (number: string) => {
-    const message = "Hello! I'm interested in booking an appointment at Beyond Smiles. Could you please provide me with more information?";
+    const message = "Hello! I'm interested in transforming my smile at Beyond Smiles. Could you please provide me with more information about your services?";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${number.replace('+', '')}?text=${encodedMessage}`, '_blank');
   };
@@ -31,7 +31,7 @@ export function StickyActions() {
           
           {/* Tooltip */}
           <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-sage-green text-white px-3 py-2 rounded-lg text-sm font-neutral-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg">
-            WhatsApp Us
+            Chat Now
             <div className="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-sage-green"></div>
           </div>
         </button>
@@ -50,7 +50,7 @@ export function StickyActions() {
           
           {/* Tooltip */}
           <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-sage-green text-white px-3 py-2 rounded-lg text-sm font-neutral-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg">
-            {isExpanded ? "Close" : "Call Us"}
+            {isExpanded ? "Close" : "Call Now"}
             <div className="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-sage-green"></div>
           </div>
         </button>
