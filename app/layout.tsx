@@ -7,6 +7,7 @@ import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { PageTransition } from "@/components/page-transition"
+import { StickyActions } from "@/components/sticky-actions"
 
 
 const garamond = EB_Garamond({
@@ -21,12 +22,17 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-// Neutral Sans font - using Inter as fallback until font files are added
-const neutralSans = Inter({
-  subsets: ["latin"],
-  display: "swap",
+// Neutral Sans font - custom local font
+const neutralSans = localFont({
+  src: [
+    {
+      path: "../public/fonts/NeutralSans-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
   variable: "--font-neutral-sans",
-  weight: ["400", "500", "700", "900"],
+  display: "swap",
 })
 
 export const metadata: Metadata = {
@@ -76,6 +82,7 @@ export default function RootLayout({
           {children}
         </PageTransition>
         <Footer />
+        <StickyActions />
       </body>
     </html>
   )

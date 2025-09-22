@@ -127,11 +127,11 @@ export function Footer() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-white mb-1 text-sm sm:text-base font-medium">🕒 Hours</p>
+                  <p className="text-white mb-1 text-sm sm:text-base font-medium">🕒 Working Hours</p>
                   <div className="text-xs sm:text-sm text-white/90 leading-relaxed">
-                    <p>Mon-Fri: 9:00 AM - 8:00 PM</p>
-                    <p>Sat: 9:00 AM - 6:00 PM</p>
-                    <p>Sun: 10:00 AM - 4:00 PM</p>
+                    <p>Monday - Thursday: 11:00 AM - 7:00 PM</p>
+                    <p>Friday: Closed</p>
+                    <p>Saturday - Sunday: 11:00 AM - 7:00 PM</p>
                   </div>
                 </div>
               </div>

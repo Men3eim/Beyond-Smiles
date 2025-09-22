@@ -484,7 +484,7 @@ export default function HomePage() {
 
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { name: "Shereef Fahmy", location: "1 year ago", rating: 5, text: "From one generation to another our whole family has always been blessed to have such an outstanding dental care in Alexandria. Thank you Dr Mohamed and all his team for always being the best. Jilan Kadry", treatment: "Family Care" },
+              { name: "Jilan Kadry", location: "1 year ago", rating: 5, text: "From one generation to another our whole family has always been blessed to have such an outstanding dental care in Alexandria. Thank you Dr Mohamed and all his team for always being the best.", treatment: "Family Care" },
               { name: "Karim Salama", location: "3 years ago", rating: 5, text: "One of the most professional, hygienic clinic in Egypt with unmatched expertise. They care about their patients, pain control, follow up even when you don't. Excellent", treatment: "General Dentistry" },
               { name: "Maram Ghaly", location: "3 years ago", rating: 5, text: "Dr. Mohamed Abdallah is one of the best cosmetic dentists in Alex. He is so patient and his work is very accurate. He is a skilled doctor who knows well what he is doing.", treatment: "Cosmetic Dentistry" },
               { name: "Mostafa Mounir", location: "1 year ago", rating: 5, text: "Dr was very professional and did an awesome job on my teeth", treatment: "General Dentistry" },
