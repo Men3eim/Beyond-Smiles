@@ -22,7 +22,6 @@ const nextConfig = {
   generateEtags: false,
   httpAgentOptions: {
     keepAlive: true,
-    timeout: 30000, // 30 seconds
   },
   experimental: {
     optimizePackageImports: ['lucide-react'],
