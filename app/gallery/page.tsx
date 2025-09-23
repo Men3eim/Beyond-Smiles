@@ -2,7 +2,7 @@ import { FadeInWhenVisible } from "@/components/fade-in-when-visible";
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Camera, Eye, Heart } from "lucide-react";
+import { Camera, Heart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -130,14 +130,10 @@ export default function GalleryPage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-dark-grey font-neutral-medium">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-dark-grey font-neutral-medium">
               <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg">
                 <Camera className="w-5 h-5 text-sage-green" />
                 <span>{galleryImages.length} Photos</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg">
-                <Eye className="w-5 h-5 text-sage-green" />
-                <span>360° Virtual Tour</span>
               </div>
               <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg">
                 <Heart className="w-5 h-5 text-sage-green" />
