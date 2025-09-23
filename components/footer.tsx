@@ -154,7 +154,7 @@ export function Footer() {
               <Link href="#" className="text-white/90 hover:text-white transition-colors whitespace-nowrap">
                 Terms of Service
               </Link>
-              <Link href="#" className="text-white/90 hover:text-white transition-colors whitespace-nowrap">
+              <Link href="/cookies" className="text-white/90 hover:text-white transition-colors whitespace-nowrap">
                 Cookie Policy
               </Link>
             </div>
