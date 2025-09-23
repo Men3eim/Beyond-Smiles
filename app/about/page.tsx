@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Beyond Smiles - Expert Dental Team in Alexandria",
     description: "Learn about our expert dental team and comprehensive care approach. 15+ years of excellence in dental care.",
-    url: "https://beyondsmiles.com/about",
+    url: "https://www.beyondsmiles.net/about",
     images: [
       {
-        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6520.jpg",
+        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/aboutus.jpeg",
         width: 1200,
         height: 630,
         alt: "Beyond Smiles Dental Clinic Team",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Learn about our expert dental team and comprehensive care approach. 15+ years of excellence in dental care.",
   },
   alternates: {
-    canonical: "https://beyondsmiles.com/about",
+    canonical: "https://www.beyondsmiles.net/about",
   },
 };
 
@@ -63,7 +63,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeInWhenVisible direction="left">
               <img
-                src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6520.jpg"
+                src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/aboutus.jpeg"
                 alt="Modern dental clinic interior"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />

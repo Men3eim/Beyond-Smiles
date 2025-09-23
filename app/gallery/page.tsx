@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dental Clinic Gallery | Beyond Smiles Alexandria",
     description: "Explore our modern dental clinic facilities and state-of-the-art equipment in Alexandria.",
-    url: "https://beyondsmiles.com/gallery",
+    url: "https://www.beyondsmiles.net/gallery",
     images: [
       {
         url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: "Explore our modern dental clinic facilities and state-of-the-art equipment.",
   },
   alternates: {
-    canonical: "https://beyondsmiles.com/gallery",
+    canonical: "https://www.beyondsmiles.net/gallery",
   },
 };
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dental Services in Alexandria | Beyond Smiles",
     description: "Comprehensive dental services including cosmetic dentistry, implants, orthodontics, and general dentistry. Expert specialists under one roof.",
-    url: "https://beyondsmiles.com/services",
+    url: "https://www.beyondsmiles.net/services",
     images: [
       {
         url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6449.jpg",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Comprehensive dental services including cosmetic dentistry, implants, orthodontics, and general dentistry.",
   },
   alternates: {
-    canonical: "https://beyondsmiles.com/services",
+    canonical: "https://www.beyondsmiles.net/services",
   },
 };
 

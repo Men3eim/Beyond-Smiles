@@ -42,10 +42,46 @@ const neutralSans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Beyond Smiles - Beyond Dentistry. Beyond Expectations.",
-  description:
-    "Expert dental care with advanced technology and personalized treatment plans. From routine checkups to complex procedures.",
+  title: "Beyond Smiles - Premium Dental Care",
+  description: "New Giza Clinic - Expert dental care with advanced technology and personalized treatment plans. From routine checkups to complex procedures.",
   generator: "v0.app",
+  keywords: ["dental clinic", "premium dental care", "New Giza", "dental treatment", "cosmetic dentistry", "orthodontics"],
+  authors: [{ name: "Beyond Smiles" }],
+  creator: "Beyond Smiles",
+  publisher: "Beyond Smiles",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.beyondsmiles.net",
+    siteName: "Beyond Smiles",
+    title: "Beyond Smiles - Premium Dental Care",
+    description: "New Giza Clinic - Expert dental care with advanced technology and personalized treatment plans. From routine checkups to complex procedures.",
+    images: [
+      {
+        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/1.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Beyond Smiles - Premium Dental Care at New Giza Clinic",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Beyond Smiles - Premium Dental Care",
+    description: "New Giza Clinic - Expert dental care with advanced technology and personalized treatment plans.",
+    images: ["https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/1.jpeg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
@@ -111,12 +147,12 @@ export default function RootLayout({
         
         {/* Preload hero carousel images to prevent caching issues */}
         <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/1.jpeg" as="image" />
-        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/2.jpg" as="image" />
-        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/3.jpg" as="image" />
-        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/4.jpg" as="image" />
-        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/5.jpeg" as="image" />
-        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/6.jpg" as="image" />
-        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/7.jpg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/2%20(1).jpg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/3%20(1).jpg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/4%20(1).jpg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/5%20(1).jpg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/6%20(1).jpg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/7%20(1).jpg" as="image" />
       </head>
       <body className="font-sans">
         {/* Structured Data */}
@@ -126,10 +162,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "DentalClinic",
-              "name": "Beyond Smiles",
-              "description": "Expert dental care with advanced technology and personalized treatment plans. From routine checkups to complex procedures.",
-              "url": "https://beyondsmiles.com",
-              "logo": "https://beyondsmiles.com/beyond-smiles-logo.svg",
+              "name": "Beyond Smiles - Premium Dental Care",
+              "alternateName": "Beyond Smiles New Giza Clinic",
+              "description": "New Giza Clinic - Expert dental care with advanced technology and personalized treatment plans. From routine checkups to complex procedures.",
+              "url": "https://www.beyondsmiles.net",
+              "logo": "https://www.beyondsmiles.net/beyond-smiles-logo.svg",
               "image": "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg",
               "telephone": ["+201289107773", "+201109721677"],
               "address": {

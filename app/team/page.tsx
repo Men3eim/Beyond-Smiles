@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Expert Dental Team in Alexandria | Beyond Smiles",
     description: "Meet our expert dental team including Dr. Mohamed Abdallah and other specialists. 15+ years of combined experience.",
-    url: "https://beyondsmiles.com/team",
+    url: "https://www.beyondsmiles.net/team",
     images: [
       {
         url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Mohamed%20Abdallah.jpg",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Meet our expert dental team including Dr. Mohamed Abdallah and other specialists.",
   },
   alternates: {
-    canonical: "https://beyondsmiles.com/team",
+    canonical: "https://www.beyondsmiles.net/team",
   },
 };
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Beyond Smiles Dental Clinic | Alexandria",
     description: "Contact us at New Giza Health Park, Alexandria. Call +201289107773 or +201109721677. Book your appointment today.",
-    url: "https://beyondsmiles.com/contact",
+    url: "https://www.beyondsmiles.net/contact",
     images: [
       {
         url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Contact us at New Giza Health Park, Alexandria. Call +201289107773 or +201109721677.",
   },
   alternates: {
-    canonical: "https://beyondsmiles.com/contact",
+    canonical: "https://www.beyondsmiles.net/contact",
   },
 };
 

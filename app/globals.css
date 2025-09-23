@@ -226,11 +226,14 @@
   0% {
     opacity: 0;
   }
-  10% {
+  4.8% {
     opacity: 1;
   }
-  90% {
+  19% {
     opacity: 1;
+  }
+  23.8% {
+    opacity: 0;
   }
   100% {
     opacity: 0;

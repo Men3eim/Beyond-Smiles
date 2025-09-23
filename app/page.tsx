@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { FadeInWhenVisible } from "@/components/fade-in-when-visible";
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation";
 import Link from "next/link";
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Beyond Smiles - Premier Dental Clinic in Alexandria",
     description: "Expert dental care with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services.",
-    url: "https://beyondsmiles.com",
+    url: "https://www.beyondsmiles.net",
     siteName: "Beyond Smiles",
     images: [
       {
@@ -60,7 +59,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://beyondsmiles.com",
+    canonical: "https://www.beyondsmiles.net",
   },
 };
 
@@ -155,67 +154,67 @@ export default function HomePage() {
                       alt="Professional dental care at Beyond Smiles"
                       fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
-                      style={{ animation: 'fadeInOut 14s infinite 0s' }}
+                      style={{ animation: 'fadeInOut 21s infinite 0s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Image 2 */}
                     <Image
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/2.jpg"
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/2%20(1).jpg"
                       alt="Advanced dental technology at Beyond Smiles"
                       fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
-                      style={{ animation: 'fadeInOut 14s infinite 2s' }}
+                      style={{ animation: 'fadeInOut 21s infinite 3s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Image 3 */}
                     <Image
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/3.jpg"
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/3%20(1).jpg"
                       alt="Modern dental clinic interior at Beyond Smiles"
                       fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
-                      style={{ animation: 'fadeInOut 14s infinite 4s' }}
+                      style={{ animation: 'fadeInOut 21s infinite 6s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Image 4 */}
                     <Image
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/4.jpg"
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/4%20(1).jpg"
                       alt="Expert dental team at Beyond Smiles"
                       fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
-                      style={{ animation: 'fadeInOut 14s infinite 6s' }}
+                      style={{ animation: 'fadeInOut 21s infinite 9s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Image 5 */}
                     <Image
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/5.jpeg"
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/5%20(1).jpg"
                       alt="State-of-the-art dental equipment at Beyond Smiles"
                       fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
-                      style={{ animation: 'fadeInOut 14s infinite 8s' }}
+                      style={{ animation: 'fadeInOut 21s infinite 12s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Image 6 */}
                     <Image
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/6.jpg"
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/6%20(1).jpg"
                       alt="Comprehensive dental services at Beyond Smiles"
                       fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
-                      style={{ animation: 'fadeInOut 14s infinite 10s' }}
+                      style={{ animation: 'fadeInOut 21s infinite 15s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Image 7 */}
                     <Image
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/7.jpg"
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/7%20(1).jpg"
                       alt="Patient-centered dental care at Beyond Smiles"
                       fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
-                      style={{ animation: 'fadeInOut 14s infinite 12s' }}
+                      style={{ animation: 'fadeInOut 21s infinite 18s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
@@ -304,20 +303,48 @@ export default function HomePage() {
             </p>
           </FadeInWhenVisible>
 
-          {/* Interactive Before/After Slider - Centered */}
+          {/* Hover Effect Before/After - Centered */}
           <FadeInWhenVisible direction="up" delay={0.2} className="flex justify-center">
-            <BeforeAfterSlider
-              beforeImage="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/bwfore.PNG"
-              afterImage="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/after.jpeg"
-              beforeAlt="Teeth before transformation"
-              afterAlt="Teeth after amazing transformation"
-              className="shadow-2xl max-w-4xl"
-            />
+            <div className="relative max-w-4xl w-full shadow-2xl rounded-2xl overflow-hidden group cursor-pointer">
+              <div className="relative aspect-[4/3]">
+                {/* After image (default) */}
+                <Image
+                  src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/after.jpeg"
+                  alt="Teeth after amazing transformation"
+                  fill
+                  className="absolute inset-0 w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 80vw"
+                />
+                {/* Before image (revealed on hover) */}
+                <Image
+                  src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/bwfore.PNG"
+                  alt="Teeth before transformation"
+                  fill
+                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
+                  sizes="(max-width: 768px) 100vw, 80vw"
+                />
+                {/* Hover overlay with instructions */}
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full">
+                    <p className="text-sage-green font-neutral-medium text-sm">
+                      Hover to see before image
+                    </p>
+                  </div>
+                </div>
+                {/* Labels */}
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                  <span className="text-sage-green font-neutral-medium text-sm">After</span>
+                </div>
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-sage-green font-neutral-medium text-sm">Before</span>
+                </div>
+              </div>
+            </div>
           </FadeInWhenVisible>
 
           <FadeInWhenVisible delay={0.4} className="text-center">
             <p className="text-sm text-neutral-grey mt-6 mb-8 font-neutral-regular">
-              Drag the slider to see the transformation
+              Hover over the image to see the transformation
             </p>
             <Link href="/cases">
               <Button

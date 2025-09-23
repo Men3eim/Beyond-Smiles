@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dental Before & After Cases | Beyond Smiles Alexandria",
     description: "View our dental before and after cases including teeth whitening, cosmetic veneers, and smile makeovers.",
-    url: "https://beyondsmiles.com/cases",
+    url: "https://www.beyondsmiles.net/cases",
     images: [
       {
         url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/111_9466.jpg",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: "View our dental before and after cases including teeth whitening and smile makeovers.",
   },
   alternates: {
-    canonical: "https://beyondsmiles.com/cases",
+    canonical: "https://www.beyondsmiles.net/cases",
   },
 };
 

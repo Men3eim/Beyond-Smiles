@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://beyondsmiles.com/sitemap.xml
+Sitemap: https://www.beyondsmiles.net/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
