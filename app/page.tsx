@@ -116,7 +116,7 @@ export default function HomePage() {
                   </Button>
                 </Link>
 
-                <Link href="/services">
+                <Link href="/cases">
                   <Button
                     size="lg"
                     variant="outline"
@@ -150,44 +150,74 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <div className="relative w-full h-[500px] md:h-[600px]">
                     {/* Image 1 */}
-                    <img
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6439.jpg"
+                    <Image
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/1.jpeg"
                       alt="Professional dental care at Beyond Smiles"
+                      fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
-                      style={{ animation: 'fadeInOut 8s infinite 0s' }}
-                      loading="eager"
+                      style={{ animation: 'fadeInOut 14s infinite 0s' }}
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Image 2 */}
-                    <img
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg"
+                    <Image
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/2.jpg"
                       alt="Advanced dental technology at Beyond Smiles"
+                      fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
-                      style={{ animation: 'fadeInOut 8s infinite 2s' }}
-                      loading="lazy"
+                      style={{ animation: 'fadeInOut 14s infinite 2s' }}
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Image 3 */}
-                    <img
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6566.jpg"
+                    <Image
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/3.jpg"
                       alt="Modern dental clinic interior at Beyond Smiles"
+                      fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
-                      style={{ animation: 'fadeInOut 8s infinite 4s' }}
-                      loading="lazy"
+                      style={{ animation: 'fadeInOut 14s infinite 4s' }}
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Image 4 */}
-                    <img
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6466.jpg"
+                    <Image
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/4.jpg"
                       alt="Expert dental team at Beyond Smiles"
+                      fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
-                      style={{ animation: 'fadeInOut 8s infinite 6s' }}
-                      loading="lazy"
+                      style={{ animation: 'fadeInOut 14s infinite 6s' }}
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    {/* Image 5 - Back to first */}
-                    <img
-                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6449.jpg"
+                    {/* Image 5 */}
+                    <Image
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/5.jpeg"
                       alt="State-of-the-art dental equipment at Beyond Smiles"
+                      fill
                       className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
-                      style={{ animation: 'fadeInOut 8s infinite 8s' }}
-                      loading="lazy"
+                      style={{ animation: 'fadeInOut 14s infinite 8s' }}
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    {/* Image 6 */}
+                    <Image
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/6.jpg"
+                      alt="Comprehensive dental services at Beyond Smiles"
+                      fill
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      style={{ animation: 'fadeInOut 14s infinite 10s' }}
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    {/* Image 7 */}
+                    <Image
+                      src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/7.jpg"
+                      alt="Patient-centered dental care at Beyond Smiles"
+                      fill
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      style={{ animation: 'fadeInOut 14s infinite 12s' }}
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
                   
@@ -295,6 +325,126 @@ export default function HomePage() {
                 className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 View All Transformations →
+              </Button>
+            </Link>
+          </FadeInWhenVisible>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="px-6 py-20 bg-gradient-to-br from-mint-green/10 to-sage-green/5">
+        <div className="max-w-7xl mx-auto">
+          <FadeInWhenVisible className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
+              What Our Patients{" "}
+              <span className="italic text-sage-green/80">Say</span>
+            </h2>
+            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto font-neutral-medium">
+              Real stories from real patients who have experienced the Beyond
+              Smiles difference.
+            </p>
+          </FadeInWhenVisible>
+
+          {/* Featured Video Testimonial */}
+          <FadeInWhenVisible className="mb-12">
+            <div className="max-w-2xl mx-auto">
+              <Card className="border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group relative overflow-hidden">
+                <div className="p-6 text-center">
+                  <h3 className="font-serif text-xl text-sage-green mb-4">Patient Review</h3>
+                  <div className="relative rounded-lg overflow-hidden shadow-lg mb-4">
+                    <video 
+                      controls 
+                      className="w-full h-auto"
+                      poster="/placeholder.jpg"
+                    >
+                      <source 
+                        src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/VIDEO-2025-09-02-18-58-35.mp4" 
+                        type="video/mp4" 
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="flex gap-1 justify-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-dark-grey italic">"Hear from our satisfied patients"</p>
+                </div>
+              </Card>
+            </div>
+          </FadeInWhenVisible>
+
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { name: "Jilan Kadry", location: "1 year ago", rating: 5, text: "From one generation to another our whole family has always been blessed to have such an outstanding dental care in Alexandria. Thank you Dr Mohamed and all his team for always being the best.", treatment: "Family Care" },
+              { name: "Karim Salama", location: "3 years ago", rating: 5, text: "One of the most professional, hygienic clinic in Egypt with unmatched expertise. They care about their patients, pain control, follow up even when you don't. Excellent", treatment: "General Dentistry" },
+              { name: "Maram Ghaly", location: "3 years ago", rating: 5, text: "Dr. Mohamed Abdallah is one of the best cosmetic dentists in Alex. He is so patient and his work is very accurate. He is a skilled doctor who knows well what he is doing.", treatment: "Cosmetic Dentistry" },
+              { name: "Mostafa Mounir", location: "1 year ago", rating: 5, text: "Dr was very professional and did an awesome job on my teeth", treatment: "General Dentistry" },
+              { name: "Maha Blakeway", location: "1 year ago", rating: 5, text: "Amazing, very meticulous work - 7 stars for sure", treatment: "Cosmetic Dentistry" },
+              { name: "Rama Mourad", location: "1 year ago", rating: 5, text: "One of the very best dental clinics", treatment: "General Dentistry" },
+              { name: "Eman Gamal", location: "2 years ago", rating: 5, text: "Very nice experience, thank you very much", treatment: "General Dentistry" },
+              { name: "Khaled Aly", location: "1 year ago", rating: 5, text: "Great Dentist, highly recommended", treatment: "General Dentistry" },
+              { name: "Lina Amr", location: "Recent", rating: 5, text: "Words won't do him justice, 1000% recommended, you're in safe hands. He gave me my dream smile in a matter of weeks and fixed what I thought couldn't be fixed. He is very patient and listens to his patients. Very understanding and professional, one of a kind dentist.", treatment: "Cosmetic Dentistry" },
+            ].map((testimonial, index) => (
+              <StaggerItem key={index}>
+                <Card
+                  className="p-6 border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group relative overflow-hidden"
+                >
+                  {/* Quote icon */}
+                  <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <Quote className="w-8 h-8 text-sage-green" />
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                      />
+                    ))}
+                  </div>
+
+                  {/* Testimonial text */}
+                  <p className="text-dark-grey mb-6 leading-relaxed font-neutral-regular italic">
+                    "{testimonial.text}"
+                  </p>
+
+                  {/* Patient info */}
+                  <div className="border-t border-gray-100 pt-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-medium text-sage-green font-neutral-medium">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-sm text-neutral-grey font-neutral-regular">
+                          {testimonial.location}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xs text-sage-green font-medium bg-sage-green/10 px-2 py-1 rounded">
+                          {testimonial.treatment}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          {/* CTA */}
+          <FadeInWhenVisible className="text-center mt-12">
+            <p className="text-lg text-dark-grey mb-6 font-neutral-medium">
+              Ready to start your own transformation story?
+            </p>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-sage-green cursor-pointer hover:bg-sage-green/90 text-white px-8 font-neutral-medium"
+              >
+                Book Your Consultation
               </Button>
             </Link>
           </FadeInWhenVisible>
@@ -484,126 +634,6 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-          </FadeInWhenVisible>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="px-6 py-20 bg-gradient-to-br from-mint-green/10 to-sage-green/5">
-        <div className="max-w-7xl mx-auto">
-          <FadeInWhenVisible className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">
-              What Our Patients{" "}
-              <span className="italic text-sage-green/80">Say</span>
-            </h2>
-            <p className="text-xl text-dark-grey leading-relaxed max-w-4xl mx-auto font-neutral-medium">
-              Real stories from real patients who have experienced the Beyond
-              Smiles difference.
-            </p>
-          </FadeInWhenVisible>
-
-          {/* Featured Video Testimonial */}
-          <FadeInWhenVisible className="mb-12">
-            <div className="max-w-2xl mx-auto">
-              <Card className="border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group relative overflow-hidden">
-                <div className="p-6 text-center">
-                  <h3 className="font-serif text-xl text-sage-green mb-4">Patient Review</h3>
-                  <div className="relative rounded-lg overflow-hidden shadow-lg mb-4">
-                    <video 
-                      controls 
-                      className="w-full h-auto"
-                      poster="/placeholder.jpg"
-                    >
-                      <source 
-                        src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/VIDEO-2025-09-02-18-58-35.mp4" 
-                        type="video/mp4" 
-                      />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div className="flex gap-1 justify-center mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-dark-grey italic">"Hear from our satisfied patients"</p>
-                </div>
-              </Card>
-            </div>
-          </FadeInWhenVisible>
-
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { name: "Jilan Kadry", location: "1 year ago", rating: 5, text: "From one generation to another our whole family has always been blessed to have such an outstanding dental care in Alexandria. Thank you Dr Mohamed and all his team for always being the best.", treatment: "Family Care" },
-              { name: "Karim Salama", location: "3 years ago", rating: 5, text: "One of the most professional, hygienic clinic in Egypt with unmatched expertise. They care about their patients, pain control, follow up even when you don't. Excellent", treatment: "General Dentistry" },
-              { name: "Maram Ghaly", location: "3 years ago", rating: 5, text: "Dr. Mohamed Abdallah is one of the best cosmetic dentists in Alex. He is so patient and his work is very accurate. He is a skilled doctor who knows well what he is doing.", treatment: "Cosmetic Dentistry" },
-              { name: "Mostafa Mounir", location: "1 year ago", rating: 5, text: "Dr was very professional and did an awesome job on my teeth", treatment: "General Dentistry" },
-              { name: "Maha Blakeway", location: "1 year ago", rating: 5, text: "Amazing, very meticulous work - 7 stars for sure", treatment: "Cosmetic Dentistry" },
-              { name: "Rama Mourad", location: "1 year ago", rating: 5, text: "One of the very best dental clinics", treatment: "General Dentistry" },
-              { name: "Eman Gamal", location: "2 years ago", rating: 5, text: "Very nice experience, thank you very much", treatment: "General Dentistry" },
-              { name: "Khaled Aly", location: "1 year ago", rating: 5, text: "Great Dentist, highly recommended", treatment: "General Dentistry" },
-              { name: "Lina Amr", location: "Recent", rating: 5, text: "Words won't do him justice, 1000% recommended, you're in safe hands. He gave me my dream smile in a matter of weeks and fixed what I thought couldn't be fixed. He is very patient and listens to his patients. Very understanding and professional, one of a kind dentist.", treatment: "Cosmetic Dentistry" },
-            ].map((testimonial, index) => (
-              <StaggerItem key={index}>
-                <Card
-                  className="p-6 border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group relative overflow-hidden"
-                >
-                  {/* Quote icon */}
-                  <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <Quote className="w-8 h-8 text-sage-green" />
-                  </div>
-
-                  {/* Rating */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
-                  </div>
-
-                  {/* Testimonial text */}
-                  <p className="text-dark-grey mb-6 leading-relaxed font-neutral-regular italic">
-                    "{testimonial.text}"
-                  </p>
-
-                  {/* Patient info */}
-                  <div className="border-t border-gray-100 pt-4">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h4 className="font-medium text-sage-green font-neutral-medium">
-                          {testimonial.name}
-                        </h4>
-                        <p className="text-sm text-neutral-grey font-neutral-regular">
-                          {testimonial.location}
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-xs text-sage-green font-medium bg-sage-green/10 px-2 py-1 rounded">
-                          {testimonial.treatment}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-
-          {/* CTA */}
-          <FadeInWhenVisible className="text-center mt-12">
-            <p className="text-lg text-dark-grey mb-6 font-neutral-medium">
-              Ready to start your own transformation story?
-            </p>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                className="bg-sage-green cursor-pointer hover:bg-sage-green/90 text-white px-8 font-neutral-medium"
-              >
-                Book Your Consultation
-              </Button>
-            </Link>
           </FadeInWhenVisible>
         </div>
       </section>

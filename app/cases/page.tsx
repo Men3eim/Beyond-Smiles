@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card"
 import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
-import { BeforeAfterSlider } from "@/components/before-after-slider"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -34,19 +33,24 @@ export const metadata: Metadata = {
 export default function CasesPage() {
   const cases = [
     {
-      title: "Whitening Case",
-      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/before%20(1).JPG",
+      after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappafter1.jpeg",
+      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappbefore1.jpeg",
+    },
+    {
+      after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappafter2.jpeg",
+      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappbefore2.jpeg",
+    },
+    {
+      after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappafter4.jpeg",
+      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappbefore3.jpeg",
+    },
+    {
       after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/IMG_0073%20(1).jpg",
+      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/before%20(1).JPG",
     },
     {
-      title: "Cosmetic Veneers Case",
-      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/before.JPG",
       after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/111_9466.jpg",
-    },
-    {
-      title: "Alignment Case",
-      before: "/placeholder.jpg",
-      after: "/placeholder.jpg",
+      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/before.JPG",
     },
   ]
 
@@ -60,7 +64,7 @@ export default function CasesPage() {
               Smile <span className="italic text-sage-green/80">Cases</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Explore real transformations. Hover on each image to reveal the before photo. You can also use our interactive slider style below.
+              Explore real transformations. Hover on each image to reveal the before photo.
             </p>
           </FadeInWhenVisible>
         </div>
@@ -80,16 +84,15 @@ export default function CasesPage() {
                 <Card className="overflow-hidden border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group">
                   <div className="relative aspect-square">
                     {/* After image (default) */}
-                    <img src={c.after} alt={`${c.title} after treatment at Beyond Smiles Dental Clinic`} className="absolute inset-0 w-full h-full object-cover" />
+                    <img src={c.after} alt={`Dental transformation after treatment at Beyond Smiles Dental Clinic`} className="absolute inset-0 w-full h-full object-cover" />
                     {/* Before image (revealed on hover) */}
                     <img
                       src={c.before}
-                      alt={`${c.title} before treatment at Beyond Smiles Dental Clinic`}
+                      alt={`Dental transformation before treatment at Beyond Smiles Dental Clinic`}
                       className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-serif text-lg text-sage-green">{c.title}</h3>
                     <p className="text-sm text-neutral-grey">Hover to reveal the before image</p>
                   </div>
                 </Card>
@@ -99,25 +102,6 @@ export default function CasesPage() {
         </div>
       </section>
 
-      {/* Classic Slider Style (kept) */}
-      <section className="px-6 pb-24 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <FadeInWhenVisible className="text-center mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-4">Interactive Slider</h2>
-            <p className="text-lg text-dark-grey leading-relaxed">Prefer the slider? Drag the handle to compare.</p>
-          </FadeInWhenVisible>
-
-          <FadeInWhenVisible direction="up" className="flex justify-center">
-            <BeforeAfterSlider
-              beforeImage="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/before.JPG"
-              afterImage="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/111_9466.jpg"
-              beforeAlt="Before treatment"
-              afterAlt="After treatment"
-              className="shadow-2xl max-w-4xl"
-            />
-          </FadeInWhenVisible>
-        </div>
-      </section>
     </div>
   )
 }

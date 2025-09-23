@@ -108,6 +108,15 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/NeutralSans-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//obxgbxpiygppoztqzksw.supabase.co" />
         <link rel="preconnect" href="https://obxgbxpiygppoztqzksw.supabase.co" crossOrigin="anonymous" />
+        
+        {/* Preload hero carousel images to prevent caching issues */}
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/1.jpeg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/2.jpg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/3.jpg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/4.jpg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/5.jpeg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/6.jpg" as="image" />
+        <link rel="preload" href="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/7.jpg" as="image" />
       </head>
       <body className="font-sans">
         {/* Structured Data */}
