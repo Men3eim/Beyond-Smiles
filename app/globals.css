@@ -282,60 +282,58 @@
   animation: slideInFromBottom 0.3s ease-out;
 }
 
-/* Mobile Image Optimization */
-@media (max-width: 768px) {
-  /* Show full images without cropping on mobile */
-  img {
-    max-width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-  }
-  
-  /* Specific fixes for Next.js Image components */
-  .next-image-mobile {
-    object-fit: contain !important;
-    object-position: center;
-  }
-  
-  /* Fix for aspect ratio containers on mobile */
-  .aspect-mobile-fix {
-    aspect-ratio: auto !important;
-    height: auto !important;
-  }
-  
-  /* Gallery images mobile optimization */
-  .gallery-image-mobile {
-    object-fit: contain !important;
-    object-position: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* Team images mobile optimization */
-  .team-image-mobile {
-    object-fit: contain !important;
-    object-position: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* Hero carousel mobile optimization */
-  .hero-carousel-mobile {
-    object-fit: contain !important;
-    object-position: center;
-  }
-  
-  /* Before/after slider mobile optimization */
-  .before-after-mobile {
-    object-fit: contain !important;
-    object-position: center;
-  }
-  
-  /* Ensure all images show completely on mobile */
-  .relative img,
-  .relative [data-nextjs-image] {
-    object-fit: contain !important;
-    object-position: center;
-  }
+/* Global Image Optimization - All Screen Sizes */
+/* Show full images without cropping on all devices */
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Specific fixes for Next.js Image components */
+.next-image-mobile {
+  object-fit: contain !important;
+  object-position: center;
+}
+
+/* Fix for aspect ratio containers */
+.aspect-mobile-fix {
+  aspect-ratio: auto !important;
+  height: auto !important;
+}
+
+/* Gallery images optimization */
+.gallery-image-mobile {
+  object-fit: contain !important;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Team images optimization */
+.team-image-mobile {
+  object-fit: contain !important;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero carousel optimization */
+.hero-carousel-mobile {
+  object-fit: contain !important;
+  object-position: center;
+}
+
+/* Before/after slider optimization */
+.before-after-mobile {
+  object-fit: contain !important;
+  object-position: center;
+}
+
+/* Ensure all images show completely */
+.relative img,
+.relative [data-nextjs-image] {
+  object-fit: contain !important;
+  object-position: center;
 }
