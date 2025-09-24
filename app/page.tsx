@@ -21,12 +21,12 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Beyond Smiles - Premier Dental Clinic in Alexandria | Cosmetic & General Dentistry",
-  description: "Expert dental care in Alexandria with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services. Book your appointment today at New Giza Health Park.",
-  keywords: "dental clinic Alexandria, cosmetic dentistry, dental implants, orthodontics, teeth whitening, dental care Egypt, Beyond Smiles",
+  title: "Beyond Smiles - Premier Dental Clinic in New Giza | Cosmetic & General Dentistry",
+  description: "Expert dental care in New Giza with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services. Book your appointment today at New Giza Health Park.",
+  keywords: "dental clinic New Giza, cosmetic dentistry, dental implants, orthodontics, teeth whitening, dental care Egypt, Beyond Smiles",
   authors: [{ name: "Beyond Smiles Dental Clinic" }],
   openGraph: {
-    title: "Beyond Smiles - Premier Dental Clinic in Alexandria",
+    title: "Beyond Smiles - Premier Dental Clinic in New Giza",
     description: "Expert dental care with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services.",
     url: "https://www.beyondsmiles.net",
     siteName: "Beyond Smiles",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Beyond Smiles - Premier Dental Clinic in Alexandria",
+    title: "Beyond Smiles - Premier Dental Clinic in New Giza",
     description: "Expert dental care with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services.",
     images: ["https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg"],
   },
@@ -153,7 +153,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/1.jpeg"
                       alt="Professional dental care at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
+                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-100"
                       style={{ animation: 'fadeInOut 21s infinite 0s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -163,7 +163,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/2%20(1).jpg"
                       alt="Advanced dental technology at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 3s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -173,7 +173,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/3%20(1).jpg"
                       alt="Modern dental clinic interior at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 6s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -183,7 +183,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/4%20(1).jpg"
                       alt="Expert dental team at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 9s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -193,7 +193,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/5%20(1).jpg"
                       alt="State-of-the-art dental equipment at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 12s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -203,7 +203,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/6%20(1).jpg"
                       alt="Comprehensive dental services at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 15s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -213,7 +213,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/7%20(1).jpg"
                       alt="Patient-centered dental care at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 18s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -312,7 +312,7 @@ export default function HomePage() {
                   src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/after.jpeg"
                   alt="Teeth after amazing transformation"
                   fill
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain"
                   sizes="(max-width: 768px) 100vw, 80vw"
                 />
                 {/* Before image (revealed on hover) */}
@@ -320,7 +320,7 @@ export default function HomePage() {
                   src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/bwfore.PNG"
                   alt="Teeth before transformation"
                   fill
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
+                  className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
                   sizes="(max-width: 768px) 100vw, 80vw"
                 />
                 {/* Hover overlay with instructions */}
@@ -404,7 +404,7 @@ export default function HomePage() {
 
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { name: "Jilan Kadry", location: "1 year ago", rating: 5, text: "From one generation to another our whole family has always been blessed to have such an outstanding dental care in Alexandria. Thank you Dr Mohamed and all his team for always being the best.", treatment: "Family Care" },
+              { name: "Jilan Kadry", location: "1 year ago", rating: 5, text: "From one generation to another our whole family has always been blessed to have such an outstanding dental care in New Giza. Thank you Dr Mohamed and all his team for always being the best.", treatment: "Family Care" },
               { name: "Karim Salama", location: "3 years ago", rating: 5, text: "One of the most professional, hygienic clinic in Egypt with unmatched expertise. They care about their patients, pain control, follow up even when you don't. Excellent", treatment: "General Dentistry" },
               { name: "Maram Ghaly", location: "3 years ago", rating: 5, text: "Dr. Mohamed Abdallah is one of the best cosmetic dentists in Alex. He is so patient and his work is very accurate. He is a skilled doctor who knows well what he is doing.", treatment: "Cosmetic Dentistry" },
               { name: "Mostafa Mounir", location: "1 year ago", rating: 5, text: "Dr was very professional and did an awesome job on my teeth", treatment: "General Dentistry" },

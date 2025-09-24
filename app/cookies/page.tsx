@@ -219,7 +219,7 @@ export default function CookiesPage() {
                   
                   <div className="space-y-3 text-dark-grey">
                     <p><strong>Phone:</strong> +201289107773 or +201109721677</p>
-                    <p><strong>Address:</strong> Building 1, Floor 2, Clinic 24, New Giza Health Park, Alexandria, Egypt</p>
+                    <p><strong>Address:</strong> Building 1, Floor 2, Clinic 24, New Giza Health Park, New Giza, Egypt</p>
                     <p><strong>Email:</strong> info@beyondsmiles.net</p>
                   </div>
                 </CardContent>

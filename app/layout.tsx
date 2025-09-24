@@ -173,7 +173,7 @@ export default function RootLayout({
                 "@type": "PostalAddress",
                 "streetAddress": "Building 1, Floor 2, Clinic 24",
                 "addressLocality": "New Giza",
-                "addressRegion": "Alexandria",
+                "addressRegion": "New Giza",
                 "addressCountry": "Egypt",
                 "postalCode": "21500"
               },
@@ -255,7 +255,7 @@ export default function RootLayout({
                     "@type": "Rating",
                     "ratingValue": "5"
                   },
-                  "reviewBody": "From one generation to another our whole family has always been blessed to have such an outstanding dental care in Alexandria. Thank you Dr Mohamed and all his team for always being the best."
+                  "reviewBody": "From one generation to another our whole family has always been blessed to have such an outstanding dental care in New Giza. Thank you Dr Mohamed and all his team for always being the best."
                 }
               ]
             })

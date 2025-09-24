@@ -8,12 +8,12 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dental Clinic Gallery | Modern Facilities & Equipment | Beyond Smiles Alexandria",
-  description: "Explore our modern dental clinic gallery in Alexandria. See our state-of-the-art equipment, comfortable patient areas, and professional treatment rooms at New Giza Health Park.",
-  keywords: "dental clinic gallery, modern dental clinic, dental equipment, clinic interior, Beyond Smiles facility, Alexandria dental center",
+  title: "Dental Clinic Gallery | Modern Facilities & Equipment | Beyond Smiles New Giza",
+  description: "Explore our modern dental clinic gallery in New Giza. See our state-of-the-art equipment, comfortable patient areas, and professional treatment rooms at New Giza Health Park.",
+  keywords: "dental clinic gallery, modern dental clinic, dental equipment, clinic interior, Beyond Smiles facility, New Giza dental center",
   openGraph: {
-    title: "Dental Clinic Gallery | Beyond Smiles Alexandria",
-    description: "Explore our modern dental clinic facilities and state-of-the-art equipment in Alexandria.",
+    title: "Dental Clinic Gallery | Beyond Smiles New Giza",
+    description: "Explore our modern dental clinic facilities and state-of-the-art equipment in New Giza.",
     url: "https://www.beyondsmiles.net/gallery",
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dental Clinic Gallery | Beyond Smiles Alexandria",
+    title: "Dental Clinic Gallery | Beyond Smiles New Giza",
     description: "Explore our modern dental clinic facilities and state-of-the-art equipment.",
   },
   alternates: {
@@ -106,7 +106,7 @@ export default function GalleryPage() {
             </h1>
             
             <p className="text-xl text-dark-grey mb-8 leading-relaxed max-w-4xl mx-auto font-neutral-medium">
-              <strong>Take a virtual tour of our modern dental clinic.</strong> From our state-of-the-art equipment to our comfortable patient areas, see why Beyond Smiles is the premier choice for dental care in Alexandria.
+              <strong>Take a virtual tour of our modern dental clinic.</strong> From our state-of-the-art equipment to our comfortable patient areas, see why Beyond Smiles is the premier choice for dental care in New Giza.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -172,7 +172,7 @@ export default function GalleryPage() {
                         src={image.src}
                         alt={image.alt}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="object-contain transition-transform duration-500 group-hover:scale-110"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       

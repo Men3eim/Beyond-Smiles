@@ -7,11 +7,11 @@ import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Expert Dental Team in Alexandria | Dr. Mohamed Abdallah & Specialists | Beyond Smiles",
-  description: "Meet our expert dental team in Alexandria including Dr. Mohamed Abdallah (cosmetic dentistry), Prof. Abbas Zaher (orthodontics), and other specialists. 15+ years of combined experience.",
-  keywords: "dental team Alexandria, Dr Mohamed Abdallah, cosmetic dentist, orthodontist, oral surgeon, dental specialists Egypt, Beyond Smiles team",
+  title: "Expert Dental Team in New Giza | Dr. Mohamed Abdallah & Specialists | Beyond Smiles",
+  description: "Meet our expert dental team in New Giza including Dr. Mohamed Abdallah (cosmetic dentistry), Prof. Abbas Zaher (orthodontics), and other specialists. 15+ years of combined experience.",
+  keywords: "dental team New Giza, Dr Mohamed Abdallah, cosmetic dentist, orthodontist, oral surgeon, dental specialists Egypt, Beyond Smiles team",
   openGraph: {
-    title: "Expert Dental Team in Alexandria | Beyond Smiles",
+    title: "Expert Dental Team in New Giza | Beyond Smiles",
     description: "Meet our expert dental team including Dr. Mohamed Abdallah and other specialists. 15+ years of combined experience.",
     url: "https://www.beyondsmiles.net/team",
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Expert Dental Team in Alexandria | Beyond Smiles",
+    title: "Expert Dental Team in New Giza | Beyond Smiles",
     description: "Meet our expert dental team including Dr. Mohamed Abdallah and other specialists.",
   },
   alternates: {
@@ -70,7 +70,7 @@ export default function TeamPage() {
                 name: "Prof. Abbas Zaher",
                 specialty: "Orthodontics",
                 description:
-                  "Professor and past-Chairman, Department of Orthodontics, Faculty of Dentistry, University of Alexandria. Honorary professor, University Del Valle, Cali, Colombia. President of the Egyptian Orthodontic Society. Past-Vice President of the World Federation of Orthodontists.",
+                  "Professor and past-Chairman, Department of Orthodontics, Faculty of Dentistry, Alexandria University. Honorary professor, University Del Valle, Cali, Colombia. President of the Egyptian Orthodontic Society. Past-Vice President of the World Federation of Orthodontists.",
                 image:
                   "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/PHOTO-2025-08-17-16-47.jpg",
               },

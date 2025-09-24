@@ -81,7 +81,7 @@ export function BeforeAfterSlider({
           src={beforeImage}
           alt={beforeAlt}
           fill
-          className="object-cover"
+          className="object-contain"
           priority
         />
         {/* Before Label */}
@@ -101,7 +101,7 @@ export function BeforeAfterSlider({
           src={afterImage}
           alt={afterAlt}
           fill
-          className="object-cover"
+          className="object-contain"
           priority
         />
         {/* After Label */}

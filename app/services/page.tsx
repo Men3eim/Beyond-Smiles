@@ -7,11 +7,11 @@ import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Dental Services in Alexandria | Cosmetic, Implants, Orthodontics | Beyond Smiles",
-  description: "Comprehensive dental services in Alexandria including cosmetic dentistry, dental implants, orthodontics, oral surgery, and general dentistry. Expert specialists under one roof.",
-  keywords: "dental services Alexandria, cosmetic dentistry, dental implants, orthodontics, oral surgery, teeth whitening, root canal, dental care Egypt",
+  title: "Dental Services in New Giza | Cosmetic, Implants, Orthodontics | Beyond Smiles",
+  description: "Comprehensive dental services in New Giza including cosmetic dentistry, dental implants, orthodontics, oral surgery, and general dentistry. Expert specialists under one roof.",
+  keywords: "dental services New Giza, cosmetic dentistry, dental implants, orthodontics, oral surgery, teeth whitening, root canal, dental care Egypt",
   openGraph: {
-    title: "Dental Services in Alexandria | Beyond Smiles",
+    title: "Dental Services in New Giza | Beyond Smiles",
     description: "Comprehensive dental services including cosmetic dentistry, implants, orthodontics, and general dentistry. Expert specialists under one roof.",
     url: "https://www.beyondsmiles.net/services",
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dental Services in Alexandria | Beyond Smiles",
+    title: "Dental Services in New Giza | Beyond Smiles",
     description: "Comprehensive dental services including cosmetic dentistry, implants, orthodontics, and general dentistry.",
   },
   alternates: {

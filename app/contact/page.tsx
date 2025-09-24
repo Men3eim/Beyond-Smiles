@@ -7,12 +7,12 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact Beyond Smiles Dental Clinic | New Giza Health Park | Alexandria",
-  description: "Contact Beyond Smiles dental clinic in New Giza Health Park, Alexandria. Call +201289107773 or +201109721677. Open Mon-Thu & Sat-Sun 11AM-7PM. Book your appointment today.",
-  keywords: "contact Beyond Smiles, dental clinic Alexandria, New Giza Health Park, dental appointment, phone number, address, working hours",
+  title: "Contact Beyond Smiles Dental Clinic | New Giza Health Park | New Giza",
+  description: "Contact Beyond Smiles dental clinic in New Giza Health Park, New Giza. Call +201289107773 or +201109721677. Open Mon-Thu & Sat-Sun 11AM-7PM. Book your appointment today.",
+  keywords: "contact Beyond Smiles, dental clinic New Giza, New Giza Health Park, dental appointment, phone number, address, working hours",
   openGraph: {
-    title: "Contact Beyond Smiles Dental Clinic | Alexandria",
-    description: "Contact us at New Giza Health Park, Alexandria. Call +201289107773 or +201109721677. Book your appointment today.",
+    title: "Contact Beyond Smiles Dental Clinic | New Giza",
+    description: "Contact us at New Giza Health Park, New Giza. Call +201289107773 or +201109721677. Book your appointment today.",
     url: "https://www.beyondsmiles.net/contact",
     images: [
       {
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Beyond Smiles Dental Clinic | Alexandria",
-    description: "Contact us at New Giza Health Park, Alexandria. Call +201289107773 or +201109721677.",
+    title: "Contact Beyond Smiles Dental Clinic | New Giza",
+    description: "Contact us at New Giza Health Park, New Giza. Call +201289107773 or +201109721677.",
   },
   alternates: {
     canonical: "https://www.beyondsmiles.net/contact",

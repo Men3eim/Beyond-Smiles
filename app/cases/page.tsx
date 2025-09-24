@@ -1,36 +1,14 @@
+"use client";
+
 import { Card } from "@/components/ui/card"
 import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
-import type { Metadata } from "next"
+import { useState } from "react"
 
-export const metadata: Metadata = {
-  title: "Dental Before & After Cases | Smile Transformations | Beyond Smiles Alexandria",
-  description: "View our dental before and after cases including teeth whitening, cosmetic veneers, and smile makeovers. Real patient transformations at Beyond Smiles dental clinic in Alexandria.",
-  keywords: "dental before after, smile transformation, teeth whitening results, cosmetic dentistry cases, dental veneers, smile makeover Alexandria",
-  openGraph: {
-    title: "Dental Before & After Cases | Beyond Smiles Alexandria",
-    description: "View our dental before and after cases including teeth whitening, cosmetic veneers, and smile makeovers.",
-    url: "https://www.beyondsmiles.net/cases",
-    images: [
-      {
-        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/111_9466.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Dental Before and After Transformation - Beyond Smiles",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Dental Before & After Cases | Beyond Smiles Alexandria",
-    description: "View our dental before and after cases including teeth whitening and smile makeovers.",
-  },
-  alternates: {
-    canonical: "https://www.beyondsmiles.net/cases",
-  },
-};
 
 export default function CasesPage() {
+  const [activeImage, setActiveImage] = useState<number | null>(null);
+  
   const cases = [
     {
       after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappafter1.jpeg",
@@ -75,25 +53,64 @@ export default function CasesPage() {
         <div className="max-w-7xl mx-auto">
           <FadeInWhenVisible className="text-center mb-12">
             <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-4">Before & After</h2>
-            <p className="text-lg text-dark-grey leading-relaxed">After image shown by default. Hover to see the before image.</p>
+            <p className="text-lg text-dark-grey leading-relaxed">View our patient transformations. Tap or hover to see the before images.</p>
           </FadeInWhenVisible>
 
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cases.map((c, idx) => (
               <StaggerItem key={idx}>
                 <Card className="overflow-hidden border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group">
-                  <div className="relative aspect-square">
+                  <div 
+                    className="relative aspect-square cursor-pointer"
+                    onClick={() => setActiveImage(activeImage === idx ? null : idx)}
+                  >
                     {/* After image (default) */}
-                    <img src={c.after} alt={`Dental transformation after treatment at Beyond Smiles Dental Clinic`} className="absolute inset-0 w-full h-full object-cover" />
-                    {/* Before image (revealed on hover) */}
+                    <img 
+                      src={c.after} 
+                      alt={`Dental transformation after treatment at Beyond Smiles Dental Clinic`} 
+                      className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${
+                        activeImage === idx 
+                          ? 'opacity-0' 
+                          : 'opacity-100'
+                      }`}
+                      onError={(e) => {
+                        console.log('After image failed to load for case', idx, c.after);
+                      }}
+                    />
+                    {/* Before image (revealed on hover/touch) */}
                     <img
                       src={c.before}
                       alt={`Dental transformation before treatment at Beyond Smiles Dental Clinic`}
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${
+                        activeImage === idx 
+                          ? 'opacity-100' 
+                          : 'opacity-0 group-hover:opacity-100 md:opacity-0 md:group-hover:opacity-100'
+                      }`}
+                      onError={(e) => {
+                        console.log('Before image failed to load for case', idx, c.before);
+                      }}
                     />
+                    {/* Clean labels - only show current state */}
+                    <div className={`absolute top-3 left-3 bg-sage-green text-white px-3 py-1 rounded-full text-sm font-medium transition-opacity duration-300 ${
+                      activeImage === idx ? 'opacity-0' : 'opacity-100'
+                    }`}>
+                      After
+                    </div>
+                    <div className={`absolute top-3 right-3 bg-sage-green text-white px-3 py-1 rounded-full text-sm font-medium transition-opacity duration-300 ${
+                      activeImage === idx 
+                        ? 'opacity-100' 
+                        : 'opacity-0 group-hover:opacity-100 md:opacity-0 md:group-hover:opacity-100'
+                    }`}>
+                      Before
+                    </div>
                   </div>
                   <div className="p-4">
-                    <p className="text-sm text-neutral-grey">Hover to reveal the before image</p>
+                    <p className="text-sm text-neutral-grey text-center">
+                      <span className="md:hidden">
+                        {activeImage === idx ? 'Tap to return to after' : 'Tap to see transformation'}
+                      </span>
+                      <span className="hidden md:inline">Hover to see transformation</span>
+                    </p>
                   </div>
                 </Card>
               </StaggerItem>
