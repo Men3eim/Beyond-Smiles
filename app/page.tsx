@@ -75,7 +75,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left content */}
-            <FadeInWhenVisible direction="up" className="text-center lg:text-left">
+            <FadeInWhenVisible direction="up" className="text-center lg:text-left order-2 lg:order-1">
               {/* Trust indicators - moved to top */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8 text-sm">
                 <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
@@ -144,7 +144,7 @@ export default function HomePage() {
             </FadeInWhenVisible>
 
             {/* Right content - Hero image carousel */}
-            <FadeInWhenVisible direction="right" delay={0.2} className="relative">
+            <FadeInWhenVisible direction="right" delay={0.2} className="relative order-1 lg:order-2">
               <div className="relative z-10 group">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <div className="relative w-full h-[500px] md:h-[600px]">
