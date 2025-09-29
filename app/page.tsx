@@ -147,13 +147,13 @@ export default function HomePage() {
             <FadeInWhenVisible direction="right" delay={0.2} className="relative order-1 lg:order-2">
               <div className="relative z-10 group">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                  <div className="relative w-full h-[500px] md:h-[600px]">
+                  <div className="relative w-full aspect-[4/3] md:h-[600px]">
                     {/* Image 1 */}
                     <Image
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/1.jpeg"
                       alt="Professional dental care at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-100"
+                      className="absolute inset-0 w-full h-full object-contain md:object-cover transition-opacity duration-1000 ease-in-out opacity-100"
                       style={{ animation: 'fadeInOut 21s infinite 0s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -163,7 +163,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/2%20(1).jpg"
                       alt="Advanced dental technology at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-contain md:object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 3s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -173,7 +173,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/3%20(1).jpg"
                       alt="Modern dental clinic interior at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-contain md:object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 6s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -183,7 +183,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/4%20(1).jpg"
                       alt="Expert dental team at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-contain md:object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 9s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -193,7 +193,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/5%20(1).jpg"
                       alt="State-of-the-art dental equipment at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-contain md:object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 12s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -203,7 +203,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/6%20(1).jpg"
                       alt="Comprehensive dental services at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-contain md:object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 15s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -213,7 +213,7 @@ export default function HomePage() {
                       src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/7%20(1).jpg"
                       alt="Patient-centered dental care at Beyond Smiles"
                       fill
-                      className="absolute inset-0 w-full h-full object-cover md:object-cover object-contain transition-opacity duration-1000 ease-in-out opacity-0"
+                      className="absolute inset-0 w-full h-full object-contain md:object-cover transition-opacity duration-1000 ease-in-out opacity-0"
                       style={{ animation: 'fadeInOut 21s infinite 18s' }}
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
