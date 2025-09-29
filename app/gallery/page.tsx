@@ -167,7 +167,7 @@ export default function GalleryPage() {
                         src={image.src}
                         alt={image.alt}
                         fill
-                        className="object-contain transition-transform duration-500 group-hover:scale-110"
+                        className="object-contain md:object-cover transition-transform duration-500 group-hover:scale-110"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       

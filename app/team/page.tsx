@@ -111,11 +111,11 @@ export default function TeamPage() {
                 <Card
                   className="overflow-hidden border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group"
                 >
-                  <div className="h-80 overflow-hidden">
+                  <div className="relative aspect-[4/3] md:aspect-auto md:h-80 overflow-hidden">
                     <img
                       src={doctor.image || "/placeholder.svg"}
                       alt={`${doctor.name} - ${doctor.specialty} at Beyond Smiles Dental Clinic`}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="p-6">

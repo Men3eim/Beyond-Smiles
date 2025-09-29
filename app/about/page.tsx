@@ -61,12 +61,14 @@ export default function AboutPage() {
       <section className="px-6 py-20 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <FadeInWhenVisible direction="left">
-              <img
-                src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/aboutus.jpeg"
-                alt="Modern dental clinic interior"
-                className="w-full h-auto rounded-2xl shadow-lg"
-              />
+            <FadeInWhenVisible direction="left" className="relative">
+              <div className="relative aspect-[4/3] md:aspect-auto md:h-auto">
+                <img
+                  src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/aboutus.jpeg"
+                  alt="Modern dental clinic interior"
+                  className="absolute inset-0 w-full h-full object-contain md:object-cover rounded-2xl shadow-lg"
+                />
+              </div>
             </FadeInWhenVisible>
             <FadeInWhenVisible direction="right" delay={0.2} className="space-y-6">
               <h2 className="font-serif text-4xl text-sage-green mb-6">
