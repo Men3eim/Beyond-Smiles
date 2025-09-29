@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     siteName: "Beyond Smiles",
     images: [
       {
-        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg",
+        url: "https://www.beyondsmiles.net/beyond-smiles-logo.svg",
         width: 1200,
         height: 630,
-        alt: "Beyond Smiles Dental Clinic Interior",
+        alt: "Beyond Smiles - Premium Dental Care Logo",
       },
     ],
     locale: "en_US",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Beyond Smiles - Premier Dental Clinic in New Giza",
     description: "Expert dental care with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services.",
-    images: ["https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg"],
+    images: ["https://www.beyondsmiles.net/beyond-smiles-logo.svg"],
   },
   robots: {
     index: true,

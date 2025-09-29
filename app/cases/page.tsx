@@ -4,6 +4,34 @@ import { Card } from "@/components/ui/card"
 import { FadeInWhenVisible } from "@/components/fade-in-when-visible"
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation"
 import { useState } from "react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Before & After Cases | Dental Transformations | Beyond Smiles New Giza",
+  description: "See real before and after dental transformation cases from Beyond Smiles. Cosmetic dentistry, implants, orthodontics, and smile makeovers in New Giza.",
+  keywords: "before after dental cases, dental transformations, cosmetic dentistry results, smile makeover, dental implants, orthodontics New Giza",
+  openGraph: {
+    title: "Before & After Cases | Dental Transformations | Beyond Smiles",
+    description: "See real before and after dental transformation cases from Beyond Smiles. Cosmetic dentistry, implants, orthodontics, and smile makeovers.",
+    url: "https://www.beyondsmiles.net/cases",
+    images: [
+      {
+        url: "https://www.beyondsmiles.net/beyond-smiles-logo.svg",
+        width: 1200,
+        height: 630,
+        alt: "Beyond Smiles - Premium Dental Care Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Before & After Cases | Dental Transformations | Beyond Smiles",
+    description: "See real before and after dental transformation cases from Beyond Smiles.",
+  },
+  alternates: {
+    canonical: "https://www.beyondsmiles.net/cases",
+  },
+};
 
 
 export default function CasesPage() {

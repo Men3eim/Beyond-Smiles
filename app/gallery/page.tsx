@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     url: "https://www.beyondsmiles.net/gallery",
     images: [
       {
-        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg",
+        url: "https://www.beyondsmiles.net/beyond-smiles-logo.svg",
         width: 1200,
         height: 630,
-        alt: "Beyond Smiles Dental Clinic Gallery",
+        alt: "Beyond Smiles - Premium Dental Care Logo",
       },
     ],
   },
@@ -75,11 +75,6 @@ export default function GalleryPage() {
       src: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6445.jpg",
       alt: "Modern dental clinic waiting area",
       category: "Clinic Interior"
-    },
-    {
-      src: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6522%20(1).jpg",
-      alt: "Advanced dental technology setup",
-      category: "Technology"
     }
   ];
 

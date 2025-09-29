@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     url: "https://www.beyondsmiles.net/contact",
     images: [
       {
-        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dentalimages/HIMA6418.jpg",
+        url: "https://www.beyondsmiles.net/beyond-smiles-logo.svg",
         width: 1200,
         height: 630,
-        alt: "Beyond Smiles Dental Clinic Location",
+        alt: "Beyond Smiles - Premium Dental Care Logo",
       },
     ],
   },

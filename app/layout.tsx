@@ -58,10 +58,10 @@ export const metadata: Metadata = {
     description: "New Giza Clinic - Expert dental care with advanced technology and personalized treatment plans. From routine checkups to complex procedures.",
     images: [
       {
-        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/1.jpeg",
+        url: "https://www.beyondsmiles.net/beyond-smiles-logo.svg",
         width: 1200,
         height: 630,
-        alt: "Beyond Smiles - Premium Dental Care at New Giza Clinic",
+        alt: "Beyond Smiles - Premium Dental Care Logo",
       },
     ],
   },
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Beyond Smiles - Premium Dental Care",
     description: "New Giza Clinic - Expert dental care with advanced technology and personalized treatment plans.",
-    images: ["https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Slideshow%20Hero%20Section/1.jpeg"],
+    images: ["https://www.beyondsmiles.net/beyond-smiles-logo.svg"],
   },
   robots: {
     index: true,

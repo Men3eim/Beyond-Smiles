@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     url: "https://www.beyondsmiles.net/team",
     images: [
       {
-        url: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Mohamed%20Abdallah.jpg",
+        url: "https://www.beyondsmiles.net/beyond-smiles-logo.svg",
         width: 1200,
         height: 630,
-        alt: "Dr. Mohamed Abdallah - Beyond Smiles Team",
+        alt: "Beyond Smiles - Premium Dental Care Logo",
       },
     ],
   },
@@ -97,6 +97,14 @@ export default function TeamPage() {
                   "Specialist in Advanced Aesthetic Restorative Dentistry (UIC Barcelona). Certified in Exocad Digital Smile Design.",
                 image:
                   "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Amr%20Elsebaey.jpg",
+              },
+              {
+                name: "Dr. Amal Amer",
+                specialty: "General Dentist",
+                description:
+                  "Amal Amer – General Dentist. 2023 Dental graduate from New Giza University with clinical experience in pedodontics, prosthodontics, oral surgery, operative, and endodontics. Committed to high-quality patient care and active in community service through dental convoys and Hospice Egypt.",
+                image:
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dr.%20Amal%20Amer.jpg",
               },
             ].map((doctor, index) => (
               <StaggerItem key={index}>
