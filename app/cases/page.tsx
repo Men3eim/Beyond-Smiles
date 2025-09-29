@@ -12,7 +12,7 @@ export default function CasesPage() {
   const cases = [
     {
       after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappafter1.jpeg",
-      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappbefore1.jpeg",
+      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappbefore1%20(1).jpeg",
     },
     {
       after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/whatsappafter2.jpeg",
