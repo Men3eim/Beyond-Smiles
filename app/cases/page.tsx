@@ -61,13 +61,16 @@ export default function CasesPage() {
               <StaggerItem key={idx}>
                 <Card className="overflow-hidden border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-lg group">
                   <div 
-                    className="relative aspect-square cursor-pointer"
+                    className="relative aspect-square cursor-pointer select-none"
                     onClick={() => setActiveImage(activeImage === idx ? null : idx)}
                   >
                     {/* After image (default) */}
                     <img 
+                      key={c.after}
                       src={c.after} 
                       alt={`Dental transformation after treatment at Beyond Smiles Dental Clinic`} 
+                      loading="lazy"
+                      decoding="async"
                       className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${
                         activeImage === idx 
                           ? 'opacity-0' 
@@ -79,8 +82,11 @@ export default function CasesPage() {
                     />
                     {/* Before image (revealed on hover/touch) */}
                     <img
+                      key={c.before}
                       src={c.before}
                       alt={`Dental transformation before treatment at Beyond Smiles Dental Clinic`}
+                      loading="lazy"
+                      decoding="async"
                       className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${
                         activeImage === idx 
                           ? 'opacity-100' 
@@ -91,12 +97,12 @@ export default function CasesPage() {
                       }}
                     />
                     {/* Clean labels - only show current state */}
-                    <div className={`absolute top-3 left-3 bg-sage-green text-white px-3 py-1 rounded-full text-sm font-medium transition-opacity duration-300 ${
+                    <div className={`absolute top-3 left-3 bg-sage-green text-white px-3 py-1 rounded-full text-sm font-medium transition-opacity duration-300 pointer-events-none ${
                       activeImage === idx ? 'opacity-0' : 'opacity-100'
                     }`}>
                       After
                     </div>
-                    <div className={`absolute top-3 right-3 bg-sage-green text-white px-3 py-1 rounded-full text-sm font-medium transition-opacity duration-300 ${
+                    <div className={`absolute top-3 right-3 bg-sage-green text-white px-3 py-1 rounded-full text-sm font-medium transition-opacity duration-300 pointer-events-none ${
                       activeImage === idx 
                         ? 'opacity-100' 
                         : 'opacity-0 group-hover:opacity-100 md:opacity-0 md:group-hover:opacity-100'
