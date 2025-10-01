@@ -6,6 +6,7 @@ import { Camera, Heart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import GalleryClient from "@/components/gallery-client";
 
 export const metadata: Metadata = {
   title: "Dental Clinic Gallery | Modern Facilities & Equipment | Beyond Smiles New Giza",
@@ -77,6 +78,14 @@ export default function GalleryPage() {
       category: "Clinic Interior"
     }
   ];
+
+  const justifiedItems = galleryImages.map((g) => ({
+    src: g.src,
+    alt: g.alt,
+    // Approximate original sizes for layout math. If you have exact sizes, replace these per image.
+    width: 2048,
+    height: 1365,
+  }))
 
   return (
     <div className="min-h-screen bg-white">
@@ -156,27 +165,8 @@ export default function GalleryPage() {
             </p>
           </FadeInWhenVisible>
 
-          {/* Gallery Grid */}
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryImages.map((image, index) => (
-              <StaggerItem key={index}>
-                <Card className="border-sage-green/20 hover:border-sage-green/40 transition-all duration-300 hover:shadow-xl group overflow-hidden">
-                  <CardContent className="p-0">
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className="object-contain md:object-cover transition-transform duration-500 group-hover:scale-110"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
-                      
-                    </div>
-                  </CardContent>
-                </Card>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          {/* Justified Gallery (Client) */}
+          <GalleryClient items={justifiedItems} />
 
           {/* CTA Section */}
           <FadeInWhenVisible className="text-center mt-16">
