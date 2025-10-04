@@ -193,7 +193,11 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) 
             fill
             className="object-contain will-change-transform"
             sizes="100vw"
-            quality={90}
+            quality={60}
+            fetchPriority="high"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+            onError={() => console.log('Lightbox image failed to load:', image.src)}
             style={{
               transform: `translate3d(${offset.x}px, ${offset.y}px, 0) scale(${zoom})`,
               transition: isDragging ? "none" : "transform 200ms ease",
@@ -215,7 +219,17 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) 
               onClick={() => navigate(i - current)}
               aria-label={`Go to image ${i + 1}`}
             >
-              <Image src={img.src} alt={img.alt || ""} fill className="object-cover" sizes="80px" />
+              <Image 
+                src={img.src} 
+                alt={img.alt || ""} 
+                fill 
+                className="object-cover" 
+                sizes="80px"
+                quality={40}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                onError={() => console.log('Thumbnail failed to load:', img.src)}
+              />
             </button>
           ))}
         </div>

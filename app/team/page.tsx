@@ -91,20 +91,20 @@ export default function TeamPage() {
                   "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dr.%20Mohamed%20Mohsen.jpg",
               },
               {
-                name: "Dr. Salma Ghoneim",
-                specialty: "General Dentistry",
-                description:
-                  "Salma Ghoneim is a dentistry graduate (BDS, New Giza University, 2025) with clinical training in general dentistry along with internships in both Cairo and Berlin. Experienced in oral surgery, pediatric dentistry, and patient-centered care.",
-                image:
-                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dr.%20Salma%20Ghoneim.jpeg",
-              },
-              {
                 name: "Dr. Amr Tarek Elsebai Mohamed",
                 specialty: "Restorative & Cosmetic Dentistry",
                 description:
                   "DDS, MSc (UIC, Barcelona)",
                 image:
                   "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Amr%20Elsebaey.jpg",
+              },
+              {
+                name: "Dr. Salma Ghoneim",
+                specialty: "General Dentistry",
+                description:
+                  "Salma Ghoneim is a dentistry graduate (BDS, New Giza University, 2025) with clinical training in general dentistry along with internships in both Cairo and Berlin. Experienced in oral surgery, pediatric dentistry, and patient-centered care.",
+                image:
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dr.%20Salma%20Ghoneim.jpeg",
               },
               {
                 name: "Dr. Amal Amer",

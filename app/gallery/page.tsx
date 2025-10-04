@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import GalleryClient from "@/components/gallery-client";
+import FullScreenCarousel from "@/components/fullscreen-carousel";
 
 export const metadata: Metadata = {
   title: "Dental Clinic Gallery | Modern Facilities & Equipment | Beyond Smiles New Giza",
@@ -89,64 +90,13 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative px-6 py-24 md:py-32 bg-gradient-to-br from-light-grey via-white to-mint-green/20 overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute top-20 right-10 w-64 h-32 bg-gradient-to-r from-mint-green/30 to-sage-green/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-48 h-24 bg-gradient-to-r from-sage-green/20 to-mint-green/20 rounded-full blur-2xl"></div>
-
-        <div className="max-w-7xl mx-auto">
-          <FadeInWhenVisible className="text-center">
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-sm mb-6">
-              <div className="w-2 h-2 bg-sage-green rounded-full animate-pulse"></div>
-              <span className="font-neutral-medium text-sage-green">Behind the Scenes</span>
-            </div>
-            
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight">
-              <span className="text-gradient-beyond">Gallery</span>{" "}
-              <span className="italic text-sage-green/90">
-                See Our World
-              </span>
-            </h1>
-            
-            <p className="text-xl text-dark-grey mb-8 leading-relaxed max-w-4xl mx-auto font-neutral-medium">
-              <strong>Take a virtual tour of our modern dental clinic.</strong> From our state-of-the-art equipment to our comfortable patient areas, see why Beyond Smiles is the premier choice for dental care in New Giza.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/contact">
-                <Button
-                  size="lg"
-                  className="bg-sage-green font-neutral-medium cursor-pointer hover:bg-sage-green/90 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                >
-                  Schedule Your Visit
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-sage-green cursor-pointer font-neutral-medium text-sage-green hover:bg-sage-green hover:text-white px-8 py-4 text-lg bg-transparent hover:shadow-lg transition-all duration-300"
-                >
-                  Our Services
-                </Button>
-              </Link>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-dark-grey font-neutral-medium">
-              <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg">
-                <Camera className="w-5 h-5 text-sage-green" />
-                <span>{galleryImages.length} Photos</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-lg">
-                <Heart className="w-5 h-5 text-sage-green" />
-                <span>Patient-Focused Design</span>
-              </div>
-            </div>
-          </FadeInWhenVisible>
-        </div>
-      </section>
+      {/* Fullscreen Carousel Hero */}
+      <FullScreenCarousel
+        images={galleryImages.map((g) => ({ src: g.src, alt: g.alt }))}
+        autoPlay
+        intervalMs={5000}
+        transitionMs={800}
+      />
 
       {/* Gallery Section */}
       <section className="px-6 py-20 bg-white">

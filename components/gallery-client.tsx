@@ -28,7 +28,7 @@ export default function GalleryClient({ items }: Props) {
           gap={16}
           rowSpacing={16}
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1200px"
-          quality={90}
+          quality={60}
           onItemClick={(i) => {
             setLightboxIndex(i)
             setLightboxOpen(true)
