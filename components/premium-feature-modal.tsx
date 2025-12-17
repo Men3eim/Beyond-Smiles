@@ -74,13 +74,13 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
     const featureName = feature === "virtual" ? "Virtual Free Consultation" : "Same-Day Crown & Implants";
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      // Submit to our secure API route (which handles Web3Forms server-side)
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          access_key: "8cbaf783-1759-459e-b13c-88d04a120c48",
           name: formData.name,
           phone: `${countryCode}${formData.phone}`,
           message: `${featureName} Request: ${formData.message || "No additional message provided"}`,
