@@ -24,6 +24,13 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) 
   const dragStartRef = useRef<{ x: number; y: number } | null>(null)
   const touchStartRef = useRef<{ x: number; y: number } | null>(null)
 
+  // Sync internal state when index prop changes externally
+  useEffect(() => {
+    setCurrent(index)
+    setZoom(1)
+    setOffset({ x: 0, y: 0 })
+  }, [index])
+
   const image = useMemo(() => images[current], [images, current])
 
   const close = useCallback(() => {
@@ -237,5 +244,4 @@ export function Lightbox({ images, index, onClose, onNavigate }: LightboxProps) 
     </div>
   )
 }
-
 

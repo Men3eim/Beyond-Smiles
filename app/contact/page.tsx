@@ -24,15 +24,13 @@ export default function ContactPage() {
     setSubmitStatus("idle")
 
     try {
-      // Using Web3Forms - Free forever, no limits!
-      // Get your access key from https://web3forms.com/
-      const response = await fetch("https://api.web3forms.com/submit", {
+      // Submit to our secure API route (which handles Web3Forms server-side)
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          access_key: "8cbaf783-1759-459e-b13c-88d04a120c48", // Replace with your key from web3forms.com
           name: formData.name,
           phone: `${countryCode}${formData.phone}`,
           message: formData.message || "No additional message provided",
