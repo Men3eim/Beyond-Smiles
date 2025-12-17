@@ -104,7 +104,7 @@ export default function TeamPage() {
                 description:
                   "DDS, MSc (UIC, Barcelona)",
                 image:
-                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Amr%20Elsebaey.jpg",
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/114338%20%20soft%20copy-min.jpg",
               },
               {
                 name: "Dr. Nihal Zahra",
