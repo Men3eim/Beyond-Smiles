@@ -8,6 +8,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { PageTransition } from "@/components/page-transition"
 import { StickyActions } from "@/components/sticky-actions"
+import { PremiumFeaturesWrapper } from "@/components/premium-features-wrapper"
 
 
 const garamond = EB_Garamond({
@@ -267,6 +268,7 @@ export default function RootLayout({
         </PageTransition>
         <Footer />
         <StickyActions />
+        <PremiumFeaturesWrapper />
       </body>
     </html>
   )

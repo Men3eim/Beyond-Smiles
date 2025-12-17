@@ -1,7 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FadeInWhenVisible } from "@/components/fade-in-when-visible";
 import { StaggerContainer, StaggerItem } from "@/components/stagger-animation";
+import { PremiumFeatureSection } from "@/components/premium-feature-section";
+import { PremiumFeatureModal } from "@/components/premium-feature-modal";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -18,52 +23,20 @@ import {
   Baby,
   Zap,
 } from "lucide-react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Beyond Smiles - Premier Dental Clinic in New Giza | Cosmetic & General Dentistry",
-  description: "Expert dental care in New Giza with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services. Book your appointment today at New Giza Health Park.",
-  keywords: "dental clinic New Giza, cosmetic dentistry, dental implants, orthodontics, teeth whitening, dental care Egypt, Beyond Smiles",
-  authors: [{ name: "Beyond Smiles Dental Clinic" }],
-  openGraph: {
-    title: "Beyond Smiles - Premier Dental Clinic in New Giza",
-    description: "Expert dental care with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services.",
-    url: "https://www.beyondsmiles.net",
-    siteName: "Beyond Smiles",
-    images: [
-      {
-        url: "https://www.beyondsmiles.net/beyond-smiles-logo.svg",
-        width: 1200,
-        height: 630,
-        alt: "Beyond Smiles - Premium Dental Care Logo",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Beyond Smiles - Premier Dental Clinic in New Giza",
-    description: "Expert dental care with 15+ years experience. Cosmetic dentistry, implants, orthodontics, and general dental services.",
-    images: ["https://www.beyondsmiles.net/beyond-smiles-logo.svg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "https://www.beyondsmiles.net",
-  },
-};
 
 export default function HomePage() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedFeature, setSelectedFeature] = useState<"virtual" | "sameday" | null>(null);
+
+  const handleOpenModal = (feature: "virtual" | "sameday") => {
+    setSelectedFeature(feature);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setSelectedFeature(null);
+  };
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -239,6 +212,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Premium Features Section */}
+      <PremiumFeatureSection onOpenModal={handleOpenModal} />
+
+      {/* Premium Feature Modal */}
+      <PremiumFeatureModal
+        isOpen={modalOpen}
+        onClose={handleCloseModal}
+        feature={selectedFeature}
+      />
 
       {/* What's Next Preview Section */}
       <section className="px-6 py-12 bg-gradient-to-r from-sage-green/5 to-mint-green/10">

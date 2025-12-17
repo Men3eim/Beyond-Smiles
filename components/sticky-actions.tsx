@@ -1,9 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, MessageCircle, X, ChevronUp } from "lucide-react";
+import { Phone, MessageCircle, X, ChevronUp, Sparkles } from "lucide-react";
 
-export function StickyActions() {
+interface StickyActionsProps {
+  onOpenPremiumFeatures?: () => void;
+}
+
+export function StickyActions({ onOpenPremiumFeatures }: StickyActionsProps = {}) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const phoneNumbers = [
@@ -17,10 +21,35 @@ export function StickyActions() {
     window.open(`https://wa.me/${number.replace('+', '')}?text=${encodedMessage}`, '_blank');
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="fixed bottom-6 right-6 z-50">
       {/* Main Action Buttons */}
       <div className="flex flex-col gap-3">
+        {/* Premium Features Button */}
+        <button
+          onClick={scrollToTop}
+          className="group relative bg-gradient-to-br from-mint-green via-sage-green/80 to-sage-green text-white p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 hover:shadow-mint-green/25 animate-pulse"
+          aria-label="View Premium Features"
+          title="View our premium services"
+        >
+          <Sparkles className="w-6 h-6" />
+          
+          {/* Tooltip */}
+          <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-sage-green text-white px-3 py-2 rounded-lg text-sm font-neutral-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg">
+            Premium Services
+            <div className="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-sage-green"></div>
+          </div>
+
+          {/* Badge */}
+          <div className="absolute -top-1 -right-1 bg-white text-sage-green text-[10px] font-neutral-bold px-1.5 py-0.5 rounded-full shadow-md">
+            NEW
+          </div>
+        </button>
+
         {/* WhatsApp Button */}
         <button
           onClick={() => handleWhatsApp("+201289107773")}
