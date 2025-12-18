@@ -29,17 +29,37 @@ export async function POST(request: Request) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        // Adding headers to reduce chance of upstream CF challenge
+        'User-Agent': 'BeyondSmilesSite/1.0 (+https://www.beyondsmiles.net)',
+        'Origin': 'https://www.beyondsmiles.net',
+        'Referer': 'https://www.beyondsmiles.net',
       },
       body: JSON.stringify({
         access_key: accessKey,
         name,
         phone,
         message: message || 'No additional message provided',
+        from_name: name,
+        email: 'no-reply@beyondsmiles.net',
         subject: subject || 'New Contact Request from Beyond Smiles Website',
       }),
     });
 
-    const result = await response.json();
+    const contentType = response.headers.get('content-type') || '';
+    let result: any;
+
+    if (contentType.includes('application/json')) {
+      result = await response.json();
+    } else {
+      // Fallback: capture text to avoid JSON parse errors and surface useful info
+      const text = await response.text();
+      console.error('Web3Forms non-JSON response', response.status, text.slice(0, 300));
+      return NextResponse.json(
+        { success: false, error: 'Upstream service returned an unexpected response', detail: text.slice(0, 300) },
+        { status: 502 }
+      );
+    }
 
     if (result.success) {
       return NextResponse.json({ success: true });
@@ -57,3 +77,4 @@ export async function POST(request: Request) {
     );
   }
 }
+

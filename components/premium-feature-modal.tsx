@@ -20,6 +20,8 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
     message: "",
   });
   const [countryCode, setCountryCode] = useState("+20");
+  const [slotDay, setSlotDay] = useState<"Sunday" | "Monday" | "Tuesday" | "Wednesday">("Sunday");
+  const [slotTime, setSlotTime] = useState<"10:00 AM" | "7:30 PM">("10:00 AM");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
@@ -72,9 +74,31 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
     setSubmitStatus("idle");
 
     const featureName = feature === "virtual" ? "Virtual Free Consultation" : "Same-Day Crown & Implants";
+    const slotText =
+      feature === "virtual"
+        ? `Preferred slot: ${slotDay} at ${slotTime} (Egypt Time)`
+        : undefined;
 
     try {
-      // Submit to our secure API route (which handles Web3Forms server-side)
+      // Virtual consultations: send directly to WhatsApp (no email form submission)
+      if (feature === "virtual") {
+        const whatsappMessage = [
+          "Hello Beyond Smiles team! I'd like to book a FREE virtual consultation.",
+          `Preferred slot: ${slotDay} at ${slotTime} (Egypt Time)`,
+          "Could you please confirm availability?",
+          `Name: ${formData.name || "N/A"}`,
+          `Phone: ${countryCode}${formData.phone}`,
+          `Notes: ${formData.message || "No additional notes provided"}`
+        ].join("\n");
+        const encoded = encodeURIComponent(whatsappMessage);
+        window.open(`https://wa.me/201222189036?text=${encoded}`, "_blank");
+        setSubmitStatus("success");
+        setFormData({ name: "", phone: "", message: "" });
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Same-day or other features: use secure API route
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -83,7 +107,9 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
         body: JSON.stringify({
           name: formData.name,
           phone: `${countryCode}${formData.phone}`,
-          message: `${featureName} Request: ${formData.message || "No additional message provided"}`,
+          message: `${featureName} Request: ${
+            slotText ? `${slotText}. ` : ""
+          }${formData.message || "No additional message provided"}`,
           subject: `${featureName} - New Booking Request from Beyond Smiles Website`,
         }),
       });
@@ -335,6 +361,40 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
+                {feature === "virtual" && (
+                  <div className="grid md:grid-cols-2 gap-4 p-4 border border-sage-green/20 rounded-xl bg-sage-green/5">
+                    <div className="space-y-2">
+                      <label className="block text-sm font-medium text-sage-green">Day (Egypt Time)</label>
+                      <select
+                        value={slotDay}
+                        onChange={(e) =>
+                          setSlotDay(e.target.value as "Sunday" | "Monday" | "Tuesday" | "Wednesday")
+                        }
+                        className="w-full px-4 py-3 border border-sage-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-green/50 focus:border-transparent bg-white"
+                      >
+                        <option value="Sunday">Sunday</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                      </select>
+                    </div>
+                    <div className="space-y-2">
+                      <label className="block text-sm font-medium text-sage-green">Time (Egypt Time)</label>
+                      <select
+                        value={slotTime}
+                        onChange={(e) => setSlotTime(e.target.value as "10:00 AM" | "7:30 PM")}
+                        className="w-full px-4 py-3 border border-sage-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-green/50 focus:border-transparent bg-white"
+                      >
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="7:30 PM">7:30 PM</option>
+                      </select>
+                    </div>
+                    <p className="md:col-span-2 text-xs text-dark-grey">
+                      Slots available Sunday to Wednesday. Times are in Egypt Time (GMT+2).
+                    </p>
+                  </div>
+                )}
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-sage-green mb-2">
                     Full Name *
@@ -424,3 +484,4 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
     </div>
   );
 }
+
