@@ -254,6 +254,38 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
           </div>
         </div>
 
+        {/* Video Section - Only for Same-Day Crown/Implants */}
+        {feature === "sameday" && (
+          <div className="px-8 md:px-10 pb-6">
+            <div className="bg-gradient-to-br from-sage-green/5 to-sage-green/10 rounded-2xl p-6 border border-sage-green/20">
+              <div className="flex items-center gap-3 mb-4">
+                <Zap className="w-6 h-6 text-sage-green" />
+                <h3 className="font-serif text-xl text-sage-green">
+                  See Our Technology in Action
+                </h3>
+              </div>
+              <p className="text-sm text-dark-grey mb-4 font-neutral-regular">
+                Watch how our advanced CEREC technology creates your custom crown in a single visit
+              </p>
+              <div className="relative w-full rounded-xl overflow-hidden shadow-lg bg-black/5 aspect-video">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster=""
+                >
+                  <source
+                    src="https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/BS-R-3%20(1)%20(1).mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Content */}
         <div className="p-8 md:p-10">
           {!showBookingForm ? (
@@ -484,4 +516,5 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
     </div>
   );
 }
+
 
