@@ -178,7 +178,7 @@ export function PremiumFeatureSection({ onOpenModal }: PremiumFeatureSectionProp
                   {[
                     "Complete crown placement in ONE appointment",
                     "Same-day dental implants available",
-                    "Advanced CEREC technology",
+                    "SprintRay in Action",
                     "Walk in with problem, leave with solution"
                   ].map((benefit, index) => (
                     <li key={index} className="flex items-start gap-3">
@@ -252,3 +252,5 @@ export function PremiumFeatureSection({ onOpenModal }: PremiumFeatureSectionProp
     </section>
   );
 }
+
+

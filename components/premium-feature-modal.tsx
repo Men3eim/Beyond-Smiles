@@ -170,7 +170,7 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
       benefits: [
         "Complete crown placement in ONE appointment",
         "Same-day dental implants available",
-        "Advanced CEREC technology",
+        "SprintRay in Action",
         "Walk in with problem, leave with solution"
       ],
       badge: "SAME DAY"
@@ -265,7 +265,7 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
                 </h3>
               </div>
               <p className="text-sm text-dark-grey mb-4 font-neutral-regular">
-                Watch how our advanced CEREC technology creates your custom crown in a single visit
+                Watch how our SprintRay technology creates your custom crown in a single visit
               </p>
               <div className="relative w-full rounded-xl overflow-hidden shadow-lg bg-black/5 aspect-video">
                 <video
