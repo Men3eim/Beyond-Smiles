@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { X, Phone, MessageCircle, Calendar, CheckCircle, Video, Zap, Star } from "lucide-react";
+import { X, Phone, MessageCircle, Calendar, CheckCircle, Video, Zap, Star, Globe, Clock } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 
@@ -24,6 +24,7 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
   const [slotTime, setSlotTime] = useState<"10:00 AM" | "7:30 PM">("10:00 AM");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [currentEgyptTime, setCurrentEgyptTime] = useState<string>("");
 
   // Reset form when modal opens/closes
   useEffect(() => {
@@ -56,6 +57,66 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
     window.addEventListener("keydown", handleEsc);
     return () => window.removeEventListener("keydown", handleEsc);
   }, [isOpen, onClose]);
+
+  // Update current Egypt time
+  useEffect(() => {
+    const updateTime = () => {
+      try {
+        const now = new Date();
+        const egyptTimeString = now.toLocaleString("en-US", { 
+          timeZone: "Africa/Cairo",
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: true
+        });
+        setCurrentEgyptTime(egyptTimeString);
+      } catch (error) {
+        // Fallback: calculate manually
+        const now = new Date();
+        const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+        const egyptOffset = 2; // GMT+2
+        const egyptTime = new Date(utc + (3600000 * egyptOffset));
+        const hours = egyptTime.getHours();
+        const minutes = egyptTime.getMinutes();
+        const ampm = hours >= 12 ? "PM" : "AM";
+        const displayHours = hours % 12 || 12;
+        const displayMinutes = minutes.toString().padStart(2, "0");
+        setCurrentEgyptTime(`${displayHours}:${displayMinutes} ${ampm}`);
+      }
+    };
+    
+    updateTime();
+    const interval = setInterval(updateTime, 60000); // Update every minute
+    return () => clearInterval(interval);
+  }, []);
+
+  // Time zone conversion helper
+  const getTimeZoneConversions = () => {
+    const isAM = slotTime === "10:00 AM";
+    const hour = isAM ? 10 : 19; // 10 AM or 7:30 PM (19:00)
+    const minute = isAM ? 0 : 30;
+    
+    // Timezone offsets from Egypt (GMT+2)
+    const conversions = [
+      { city: "London (GMT)", offset: -2 },
+      { city: "New York (EST)", offset: -7 },
+      { city: "Dubai (GST)", offset: 0 },
+      { city: "Riyadh (AST)", offset: -1 },
+      { city: "Paris (CET)", offset: -1 },
+    ];
+    
+    return conversions.map(({ city, offset }) => {
+      // Calculate converted time
+      let convertedHour = hour + offset;
+      if (convertedHour < 0) convertedHour += 24;
+      if (convertedHour >= 24) convertedHour -= 24;
+      
+      const ampm = convertedHour >= 12 ? "PM" : "AM";
+      const displayHours = convertedHour % 12 || 12;
+      const displayMinutes = minute.toString().padStart(2, "0");
+      return { city, time: `${displayHours}:${displayMinutes} ${ampm}` };
+    });
+  };
 
   const handleWhatsApp = () => {
     const featureName = feature === "virtual" ? "Virtual Free Consultation" : "Same-Day Crown & Implants";
@@ -394,37 +455,86 @@ export function PremiumFeatureModal({ isOpen, onClose, feature }: PremiumFeature
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {feature === "virtual" && (
-                  <div className="grid md:grid-cols-2 gap-4 p-4 border border-sage-green/20 rounded-xl bg-sage-green/5">
-                    <div className="space-y-2">
-                      <label className="block text-sm font-medium text-sage-green">Day (Egypt Time)</label>
-                      <select
-                        value={slotDay}
-                        onChange={(e) =>
-                          setSlotDay(e.target.value as "Sunday" | "Monday" | "Tuesday" | "Wednesday")
-                        }
-                        className="w-full px-4 py-3 border border-sage-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-green/50 focus:border-transparent bg-white"
-                      >
-                        <option value="Sunday">Sunday</option>
-                        <option value="Monday">Monday</option>
-                        <option value="Tuesday">Tuesday</option>
-                        <option value="Wednesday">Wednesday</option>
-                      </select>
+                  <>
+                    {/* International Patients Badge */}
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="flex items-center gap-2 bg-gradient-to-r from-sage-green/10 to-mint-green/10 px-4 py-2 rounded-full border border-sage-green/20">
+                        <Globe className="w-4 h-4 text-sage-green" />
+                        <span className="text-sm font-neutral-medium text-sage-green">
+                          International Patients Welcome
+                        </span>
+                      </div>
                     </div>
-                    <div className="space-y-2">
-                      <label className="block text-sm font-medium text-sage-green">Time (Egypt Time)</label>
-                      <select
-                        value={slotTime}
-                        onChange={(e) => setSlotTime(e.target.value as "10:00 AM" | "7:30 PM")}
-                        className="w-full px-4 py-3 border border-sage-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-green/50 focus:border-transparent bg-white"
-                      >
-                        <option value="10:00 AM">10:00 AM</option>
-                        <option value="7:30 PM">7:30 PM</option>
-                      </select>
+
+                    {/* Slot Selection */}
+                    <div className="grid md:grid-cols-2 gap-4 p-4 border border-sage-green/20 rounded-xl bg-sage-green/5">
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-sage-green">Day (Egypt Time)</label>
+                        <select
+                          value={slotDay}
+                          onChange={(e) =>
+                            setSlotDay(e.target.value as "Sunday" | "Monday" | "Tuesday" | "Wednesday")
+                          }
+                          className="w-full px-4 py-3 border border-sage-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-green/50 focus:border-transparent bg-white"
+                        >
+                          <option value="Sunday">Sunday</option>
+                          <option value="Monday">Monday</option>
+                          <option value="Tuesday">Tuesday</option>
+                          <option value="Wednesday">Wednesday</option>
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="block text-sm font-medium text-sage-green">Time (Egypt Time)</label>
+                        <select
+                          value={slotTime}
+                          onChange={(e) => setSlotTime(e.target.value as "10:00 AM" | "7:30 PM")}
+                          className="w-full px-4 py-3 border border-sage-green/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-sage-green/50 focus:border-transparent bg-white"
+                        >
+                          <option value="10:00 AM">10:00 AM</option>
+                          <option value="7:30 PM">7:30 PM</option>
+                        </select>
+                      </div>
+                      <p className="md:col-span-2 text-xs text-dark-grey">
+                        Slots available Sunday to Wednesday. Times are in Egypt Time (GMT+2).
+                      </p>
                     </div>
-                    <p className="md:col-span-2 text-xs text-dark-grey">
-                      Slots available Sunday to Wednesday. Times are in Egypt Time (GMT+2).
-                    </p>
-                  </div>
+
+                    {/* Time Zone Info Box */}
+                    <div className="p-5 bg-gradient-to-br from-sage-green/5 to-mint-green/5 border border-sage-green/20 rounded-xl">
+                      <div className="flex items-start gap-3 mb-4">
+                        <div className="w-10 h-10 bg-sage-green/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Clock className="w-5 h-5 text-sage-green" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-neutral-bold text-sage-green mb-1">
+                            Time Zone Information
+                          </h4>
+                          <p className="text-xs text-dark-grey font-neutral-regular mb-3">
+                            We welcome patients from around the world. All times are in Egypt Time (GMT+2).
+                          </p>
+                          {currentEgyptTime && (
+                            <p className="text-sm font-neutral-medium text-sage-green mb-3">
+                              Current Egypt Time: <span className="font-neutral-bold">{currentEgyptTime}</span>
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                      
+                      <div className="bg-white/60 rounded-lg p-4 border border-sage-green/10">
+                        <p className="text-xs font-neutral-medium text-sage-green mb-3">
+                          {slotTime} Egypt Time (GMT+2) equals:
+                        </p>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                          {getTimeZoneConversions().map(({ city, time }, index) => (
+                            <div key={index} className="flex flex-col">
+                              <span className="text-xs text-dark-grey font-neutral-medium">{city}</span>
+                              <span className="text-sm font-neutral-bold text-sage-green">{time}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </>
                 )}
 
                 <div>
