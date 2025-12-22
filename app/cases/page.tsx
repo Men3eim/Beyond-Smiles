@@ -90,6 +90,11 @@ export default function CasesPage() {
       after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/ortho3/Picture6.png",
       before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/ortho3/Picture5.png",
     },
+    // New case
+    {
+      after: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/WhatsApp%20Image%202025-12-15%20at%2010.06.56%20PM%20(1)After.jpeg",
+      before: "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Before%20and%20After/WhatsApp%20Image%202025-12-15%20at%2010.06.31%20PM%20(1)Before.jpeg",
+    },
   ], []);
 
   const handleImageLoad = useCallback((index: number) => {
