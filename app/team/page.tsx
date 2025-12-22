@@ -112,7 +112,7 @@ export default function TeamPage() {
                 description:
                   "Master's degree candidate in Pedodontics, Faculty of Dentistry, Cairo University. Holds a Bachelor's degree in Dental Medicine and Surgery from New Giza University. Dedicated to providing comprehensive dental care for children with a compassionate and preventive approach. Passionate about promoting oral health awareness and creating positive dental experiences for young patients.",
                 image:
-                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dr.%20Nihal%20Zahra.jpeg",
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dr.%20Nihal%20Zahra.jpg",
               },
               {
                 name: "Dr. Salma Ghoneim",
