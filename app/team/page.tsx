@@ -83,20 +83,20 @@ export default function TeamPage() {
                   "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/DR.Aly%20Mohamed%20Atteya.jpg",
               },
               {
-                name: "Dr. Adham Yehya Zakareya",
-                specialty: "Oral and Maxillofacial Surgery",
-                description:
-                  "MSc, PhD. Lecturer of Oral and Maxillofacial Surgery, Cairo University.",
-                image:
-                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dr%20Adham%20yehya%20zakareya.jpeg",
-              },
-              {
                 name: "Dr. Mohamed Mohsen",
                 specialty: "Endodontic Consultant",
                 description:
                   "Experienced endodontic consultant providing comprehensive root canal treatment and endodontic care with a focus on patient comfort and excellent outcomes.",
                 image:
                   "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dr.%20Mohamed%20Mohsen.jpg",
+              },
+              {
+                name: "Dr. Adham Yehya Zakareya",
+                specialty: "Oral and Maxillofacial Surgery",
+                description:
+                  "MSc, PhD. Lecturer of Oral and Maxillofacial Surgery, Cairo University.",
+                image:
+                  "https://obxgbxpiygppoztqzksw.supabase.co/storage/v1/object/public/Pictures/beyondsmiles/Dr%20Adham%20yehya%20zakareya.jpeg",
               },
               {
                 name: "Dr. Amr Tarek Elsebai Mohamed",
