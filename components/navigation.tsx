@@ -16,7 +16,7 @@ export function Navigation() {
     { href: "/cases", label: "Cases" },
     { href: "/gallery", label: "Gallery" },
     { href: "/team", label: "Our Team" },
-    { href: "/contact", label: "Contact" },
+    { href: "/#testimonials", label: "Our Patients Say" },
   ];
 
   return (

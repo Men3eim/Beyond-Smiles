@@ -342,7 +342,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="px-6 py-20 bg-gradient-to-br from-mint-green/10 to-sage-green/5">
+      <section id="testimonials" className="px-6 py-20 bg-gradient-to-br from-mint-green/10 to-sage-green/5">
         <div className="max-w-7xl mx-auto">
           <FadeInWhenVisible className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl text-sage-green mb-6">

@@ -169,3 +169,5 @@ export function PremiumFeatureBadges({ onOpenModal }: PremiumFeatureBadgesProps)
     </div>
   );
 }
+
+
